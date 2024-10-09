@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhangyun_introduce</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px; /* 设置固定宽度 */
+            margin: 40px auto; /* 垂直方向的边距和居中 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .section-title {
+            background-color: #BAC9D4; /* 标题背景颜色淡蓝色 */
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .section-content {
+            background-color: #f7f7f7; /* 模块内容背景颜色浅灰色 */
+            padding: 15px;
+            font-size: 16px;
+            position: relative;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            border: 2px solid #ddd;
+        }
+        .teacher-avatar {
+            /*position: absolute;*/
+            /*top: 15px;*/
+            /*right: 15px; !* 将导师头像移到右边 *!*/
+            /*height: auto;*/
+
+            /*height: auto; !* 高度自适应 *!*/
+            width: 100px; /* 固定宽度 */
+            height: 120px; /* 固定高度 */
+            border: 2px solid #ddd; /* 边框样式 */
+            position: absolute; /* 绝对定位 */
+            top: 15px; /* 距离顶部的距离 */
+            right: 15px; /* 距离右边的距离 */
+            border-radius: 10%; /* 设置为方形 */
+
+
+        }
+        .student-card {
+            display: flex;
+            align-items: flex-start; /* 内容靠上对齐 */
+            margin-bottom: 20px;
+        }
+        .student-info {
+            margin-left: 15px;
+            flex: 1; /* 让学生信息占用剩余空间 */
+        }
+        .student-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+        .student-description {
+            margin: 5px 0 0;
+            line-height: 1.5; /* 调整行间距，增加可读性 */
+            text-align: justify; /* 使内容对齐，增强美观性 */
+        }
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+        .selected {
+            background-color: yellow;
+        }
+
+        .bold-text {
+            font-weight: bold; /* 字体加粗 */
+            font-size: 16px; /* 调整字体大小 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> </h1>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">基本信息</h2>
+        <div class="section-content">
+            <p>姓名: 张韵</p>
+            <p>职称: 讲师</p>
+            <p>院系: 计算机与软件学院</p>
+            <p>联系方式: zhangyunswpu@163.com</p>
+            <img src="assets/img/teacher/zhangyun.jpg" alt="导师头像" class="avatar teacher-avatar"> <!-- 替换为实际头像路径 -->
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">个人简历</h2>
+        <div class="section-content">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024年毕业于电子科技大学 计算机科学与技术专业，获得工学博士学位。累计发表SCI期刊、会议论文8篇，其中以第一者在计算机领域顶级期刊IEEE TNNLS、Nueral Networks发表论文2篇；申请专利2项。主研国家重点研发计划1项、国家自然科学基金1项、四川省科技计划项目1项。同时担任TNNLS、Nueral Networks、NeuroComputing、IJCNN等多个知名期刊和会议担任审稿人。
+            </p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">主要研究方向</h2>
+        <div class="section-content">
+            <p>人工智能、脉冲神经网络、类脑计算、 深度学习等</p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">代表性成果</h2>
+        <div class="section-content">
+
+
+            <P class="bold-text">论文</P>
+
+            <p>[1] Zhang Yun, Chen Yi, et al. Minicolumn-based episodic memory model with spiking neurons, dendrites and delays[J]. IEEE Transactions on Neural Networks and Learning Systems, 2024, 35(5): 7072-7086.（中科院一区，中国人工智能学会 A类）</p>
+
+            <p>[2] Zhang Yun, Qu Hong*, et al. A new recursive least squares-based learning algorithm for spiking neurons[J]. Neural Networks, 2021, 138: 110-125. （中科院一区，CCF-B）</p>
+
+            <p>[3] Zhang Yun, Sun Qian, et al. A retina-inspired neural model for single image haze removal[C]. 2023 6th International Conference on Algorithms, Computing and Artificial Intelligence, 2023: 170-175.</p>
+
+            <p>[4] Liu Yuguo, Chen Wenyu, Liu Hanwen, Zhang Yun, Zhang Malu and Qu Hong*. Biologically plausible sparse temporal word representations[J]. IEEE Transactions on Neural Networks and Learning Systems, 2023, Early Access. （中科院一区，中国人工智能学会 A类）</p>
+
+            <p>[5] Luo Xiaoling, Qu Hong*, Zhang Yun, and Chen Yi. First error-based supervised learning algorithm for spiking neural networks[J]. Frontiers in Neuroscience, 2019, 13: 456483. （中科院二区）</p>
+
+            <p>[6] Liu Ying, Zhang Wei, Luo Xiaoling, Zhang Yun, and Qu Hong*. SpikeFusionNet: a hybrid approach to robotic fault diagnosis using spiking neural dynamics[C]. International Conference on Intelligent Computing, 2024: 101-112.（CCF-C）</p>
+
+            <p>[7] Liu Yuguo, Chen Wenyu, Liu Hanwen, Zhang Yun, Huang Li, and Qu Hong*. A Multiscale Resonant Spiking Neural Network for Music Classification[C]. International Conference on Artificial Neural Networks. 2024: 3-16.（CCF-C）</p>
+
+            <p>[8] Li Fan, Chen Wenyu, Yang Zhiyou, Fu Mingsheng, Zhang Yun, and Qu Hong*. An empirical perspective on learning-to-rank[C]. 2023 9th International Conference on Computing and Artificial Intelligence, 2023: 419-424.</p>
+
+            <p></p>
+            <P class="bold-text">专利</P>
+
+            <p>[1] 王静，屈鸿，张韵，张司霖，陈一. 一种基于脉冲神经网络的人体移动检测方法及系统: CN202310623075.4. 2023-05-30.</p>
+
+            <p>[2] 屈鸿，张韵，罗笑玲，李润雨. 一种基于多层脉冲神经网络的数字样本语音信号识别方法: CN202310444911.2. 2023-04-24</p>
+
+            <p></p>
+            <P class="bold-text">参与项目</P>
+
+            <p>[1] 国家重点研发计划（项目二），2018AAA0100202，2019/01-2023/12，神经元和模块功能特异化研究，154万元，主研，已结题。</p>
+
+            <p>[2] 国家自然科学基金面上项目, 61976043, 2020/01-2023/12，具有模块功能特异化性质的新型 Spiking 神经网络模型研究, 56万元，主研，已结题。</p>
+
+            <p>[3] 四川省科技计划项目, 2022YFG0313, 2022/01-2023/12，具有神经形态特征的深度Spiking 神经网络类脑芯片理论研究及应用，主研，已结题。</p>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    function selectSection(section) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('selected'));
+        section.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>

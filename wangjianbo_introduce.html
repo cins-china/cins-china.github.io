@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPing_introduce</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px; /* 设置固定宽度 */
+            margin: 40px auto; /* 垂直方向的边距和居中 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .section-title {
+            background-color: #BAC9D4; /* 标题背景颜色淡蓝色 */
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .section-content {
+            background-color: #f7f7f7; /* 模块内容背景颜色浅灰色 */
+            padding: 15px;
+            font-size: 16px;
+            position: relative;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        .teacher-avatar {
+            width: 100px; /* 固定宽度 */
+            height: 120px; /* 固定高度 */
+            border: 2px solid #ddd; /* 边框样式 */
+            position: absolute; /* 绝对定位 */
+            top: 15px; /* 距离顶部的距离 */
+            right: 15px; /* 距离右边的距离 */
+            border-radius: 10%; /* 设置为方形 */
+        }
+        .student-card {
+            display: flex;
+            align-items: flex-start; /* 内容靠上对齐 */
+            margin-bottom: 20px;
+        }
+        .student-info {
+            margin-left: 15px;
+            flex: 1; /* 让学生信息占用剩余空间 */
+        }
+        .student-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+        .student-description {
+            margin: 5px 0 0;
+            line-height: 1.5; /* 调整行间距，增加可读性 */
+            text-align: justify; /* 使内容对齐，增强美观性 */
+        }
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+        .selected {
+            background-color: yellow;
+        }
+        .bold-text {
+            font-weight: bold; /* 字体加粗 */
+            font-size: 16px; /* 调整字体大小 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> </h1>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">基本信息</h2>
+        <div class="section-content">
+            <p>姓名: 王建波</p>
+            <p>职称: 讲师</p>
+            <p>院系: 计算机与软件学院</p>
+            <p>联系方式: jianbow202@qq.com</p>
+            <img src="assets/img/teacher/wangjianbo.jpg" alt="导师头像" class="avatar teacher-avatar"> <!-- 替换为实际头像路径 -->
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">个人简历</h2>
+        <div class="section-content">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年6月毕业于复旦大学，获理学博士学位，曾在香港城市大学做博士后研究、香港大学任高级助理研究员。2019年7月加入西南石油大学计算机科学学院，长期致力于网络科学、机器学习/深度学习算法、计算流行病学等前沿热点的科学研究。研究成果在IEEE Transactions on Cybernetics、IEEE Transactions on Network Science and Engineering、《中国科学：信息科学》等国内外权威期刊发表学术论文20 余篇，单篇论文最高谷歌学术（Google scholar）引用163次； 出版专著 1 部；主研国家自然科学基金项目2项；担任BMC Medicine、Automatica、IEEE Transactions on Network Science and Engineering等多个国际权威SCI期刊的特邀审稿人。
+            </p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">主要研究方向</h2>
+        <div class="section-content">
+            <p>网络科学（复杂网络）、机器学习/深度学习算法及应用、计算流行病学</p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">代表性成果</h2>
+        <div class="section-content">
+            <p>李翔，李聪，王建波 著，复杂网络传播理论——流行的隐秩序，高等教育出版社，2020年9月出版.（获国家科学技术学术著作出版基金的资助）</p>
+
+            <p class="bold-text">英文学术专著1章：</p>
+                <p>Xiang Li, Jian-Bo Wang and Cong Li, “Towards identifying and predicting spatial epidemics on complex metapopulation networks,” In book: Naoki Masuda and Petter Holme (Eds.) “Temporal Network Epidemiology”, Springer, Singapore. 2017, pp. 129-160.</p>
+
+            <p class="bold-text">SCI论文(*为通讯作者)：</p>
+            <p>[1] Jianbo Wang, et al. Perspective on the spatio-temporal spread of epidemics in metapopulation networks. Europhysics Letters 144.1 (2023): 11001.(Invited review paper)</p>
+            <p>[2] 罗余，王建波*，李平，杜占玮，许小可*．基于多阶邻居传播度量和拓扑特征的高影响力节点识别. 中国科学：信息科学，2023，已录用待刊.</p>
+            <p>[3] 沈力峰，王建波*，杜占玮，许小可*．基于社团结构和活跃性驱动的双层网络传播动力学研究．物理学报，2023, 72(6): 068701.</p>
+            <p>[4] Jianbo Wang, Yin-Chi Chan, Ruiwu Niu, Eric W. M. Wong and Michaël Antonie van Wyk, Modeling the Impact of Vaccination on COVID-19 and Its Delta and Omicron Variants. Viruses, 14(7), p. 1482, 2022.</p>
+            <p>[5] Jian-Bo Wang, Xiang Li, Uncovering spatial invasion on metapopulation networks with SIR epidemics. IEEE Transactions on Network Science and Engineering, 6(4), pp. 788-800, 2019. (Regular paper)</p>
+            <p>[6] Jian-Bo Wang, Lin Wang and Xiang Li, Identifying spatial invasion of pandemics on metapopulation networks via anatomizing arrival history, IEEE Transactions on Cybernetics, 46(12), pp. 2782-2795, Dec. 2016. (Regular paper)</p>
+            <p>[7] Chang-Bing Tang, Bin Wu, Jian-Bo Wang and Xiang Li, Evolutionary Origin of Asymptotically Stable Consensus, Scientific Reports, 4, p. 4590, 2014.</p>
+            <p>[8] Changbing Tang, Fangyue Chen, Jianbo Wang, Xiang Li, Extending local passivity theory and hopf bifurcation at the edge of chaos in oregonator CNN, International Journal of Bifurcation and Chaos, 22(11), p. 1250285, 2012.</p>
+            <p>[9] Jingchao Qi, Jianying Wang, Jianbo Wang, Qin Xiao and Huijie Yang. Visibility graphs for time series containing different components. Fluctuation and Noise Letters, 10(04), pp. 371-379, 2011.</p>
+            <p>[10] Zhibin Jiang, Huijie Yang, and Jianbo Wang, Complexities of human promoter sequences, Physica A, 388, p. 1299, 2009.</p>
+            <p>[11] Yue Yang, Jianbo Wang, Huijie Yang, Jingshi Mang, Visibility graph approach to exchange rate series, Physica A, 388, p. 4431, 2009. (谷歌学术引用 163次)</p>
+            <p>[12] Jianbo Wang, and Huijie Yang, Complex network-based analysis of air temperature data in China, Modern Physics Letters B, 23, p. 1781, 2009.</p>
+
+            <p class="bold-text">EI会议论文：</p>
+            <p>[1] Yuan Zhang, Jianbo Wang, Cong Li, and Xiang Li, Epidemic spreading in time-varying networks with activity-driven infectivity. In: IEEE 58th Conference on Decision and Control (CDC), pp. 3776-3781, 2019. (控制顶会)</p>
+            <p>[2] Jian-Bo Wang, Cong Li, and Xiang Li, Predicting spatial transmission at the early stage of epidemics on a networked metapopulation. In: Proceedings of 12th IEEE International Conference on Control & Automation (ICCA), pp. 116-121, 2016.</p>
+            <p>[3] Xiang Li, Jian-Bo Wang, and Cong Li, Towards identifying epidemic processes with interplay between complex networks and human populations. In: Proceedings of 2016 IEEE Conference on Norbert Wiener in the 21st Century (21CW), pp. 67-71, 2016.</p>
+            <p>[4] Jian-Bo Wang, Xiang Li and Lin Wang, Inferring spatial transmission of epidemics in networked metapopulations, In: IEEE International Symposium on Circuits and Systems (ISCAS), pp. 906-909, 2015.</p>
+            <p>[5] Jian-Bo Wang, Lang Cao, and Xiang Li, On estimating spatial epidemic parameters of a simplified metapopulation model, In: 13th IFAC Symposium on Large Scale Complex Systems: Theory and Applications (LSS 2013), (TuB02.5) pp. 383-388, 2013.</p>
+
+            <p class="bold-text">其他活动:</p>
+            <p>担任国际SCI期刊Frontiers in Physics(IF=3.718)客座副编辑（Guest Associate Editor 2022.7-2023.1，2023.10-2024.3）</p>
+
+        </div>
+    </div>
+
+<!--    <div class="section" onclick="selectSection(this)">-->
+<!--        <h2 class="section-title">优秀毕业学生</h2>-->
+
+<!--    </div>-->
+</div>
+
+<script>
+    function selectSection(section) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('selected'));
+        section.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>

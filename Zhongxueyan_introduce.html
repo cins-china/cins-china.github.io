@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPing_introduce</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px; /* 设置固定宽度 */
+            margin: 40px auto; /* 垂直方向的边距和居中 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .section-title {
+            background-color: #BAC9D4; /* 标题背景颜色淡蓝色 */
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .section-content {
+            background-color: #f7f7f7; /* 模块内容背景颜色浅灰色 */
+            padding: 15px;
+            font-size: 16px;
+            position: relative;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            border: 2px solid #ddd;
+        }
+        .teacher-avatar {
+            /*position: absolute;*/
+            /*top: 15px;*/
+            /*right: 15px; !* 将导师头像移到右边 *!*/
+            /*height: auto;*/
+
+            /*height: auto; !* 高度自适应 *!*/
+            width: 100px; /* 固定宽度 */
+            height: 120px; /* 固定高度 */
+            border: 2px solid #ddd; /* 边框样式 */
+            position: absolute; /* 绝对定位 */
+            top: 15px; /* 距离顶部的距离 */
+            right: 15px; /* 距离右边的距离 */
+            border-radius: 10%; /* 设置为方形 */
+
+
+        }
+        .student-card {
+            display: flex;
+            align-items: flex-start; /* 内容靠上对齐 */
+            margin-bottom: 20px;
+        }
+        .student-info {
+            margin-left: 15px;
+            flex: 1; /* 让学生信息占用剩余空间 */
+        }
+        .student-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+        .student-description {
+            margin: 5px 0 0;
+            line-height: 1.5; /* 调整行间距，增加可读性 */
+            text-align: justify; /* 使内容对齐，增强美观性 */
+        }
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+        .selected {
+            background-color: yellow;
+        }
+
+        .bold-text {
+            font-weight: bold; /* 字体加粗 */
+            font-size: 16px; /* 调整字体大小 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> </h1>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">基本信息</h2>
+        <div class="section-content">
+            <p>姓名: 钟学燕</p>
+            <p>职称: 副教授</p>
+            <p>院系: 计算机与软件学院</p>
+            <p>联系方式: zhongxueyan@126.com</p>
+            <img src="assets/img/teacher/zhongxueyan.png" alt="导师头像" class="avatar teacher-avatar"> <!-- 替换为实际头像路径 -->
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">个人简历</h2>
+        <div class="section-content">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先后主持及主研多项省部级及以上纵向课题，主持或参与20余项数据挖掘、人工智能、企业信息化建设等横向项目，研究成果申请国家发明专利10余项，获得软件著作权登记4项。清华大学访问学者，中国计算机学会/国际信息系统协会会员。长期从事机器学习与深度学习、人工智能、工业异常检测、推荐系统、知识图谱、自然语言处理等方面研究，相关研究工作发表在如系统工程理论与实践、计算机工程、Data Science and Knowledge Engineering、Transportation Engineering、Logistics Engineering and Management等具有影响力的学术期刊和国际会议上。获得多项行业部级科研奖励及创新创业优秀指导教师称号，包括中国物流与采购联合会科技进步奖三等奖，四川省教学成果一等奖，西南石油大学课堂教学质量奖二等奖，全国多媒体课件大赛高教文科组三等奖，西南石油大学本科毕业设计优秀指导教师，西南石油大学优秀教材一等奖等。
+            </p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">主要研究方向</h2>
+        <div class="section-content">
+            <p>机器学习，深度学习，人工智能，油气田人工智能，工业异常检测，推荐系统，知识图谱，自然语言处理</p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">代表性成果</h2>
+        <div class="section-content">
+            <p>[1] 主研：海上油田油藏注采单元智能调控系统项目；</p>
+            <p>[2] 主研：海上油田注水管理模块智能化升级项目-智能注采算法设计与实现；</p>
+            <p>[3] 主研：某水电企业生产运行智能监视系统项目；</p>
+            <p>[4] 主研：超大规模知识图谱构建、推理与检索技术研究；</p>
+            <p>[5] 主研：四川省科技厅项目，天然气深冷装置关键工艺参数智能分析研究与应用；</p>
+            <p>[6] 主研：气井排采运行优化大数据挖掘；</p>
+            <p>[7] 主研：四川省高等教育人才培养质量和教学改革项目，面向创新能力提升的大数据专业人才培养路径探索与设计（JG2021-611）；</p>
+            <p>[8] 主持：西南石油大学2021-2023年高等教育教学改革研究项目，基于OBE的数据科学与大数据技术专业培养目标达成研究与实践；</p>
+            <p>[9] 主研：西南石油大学2018年本科课程教学改革研究项目，大数据商务管理与决策下的管理信息系统实践课程建设(X2018KZ028)；</p>
+            <p>[10] 主持：西南石油大学2018年高等教育教学改革研究校级一般项目：新工科背景下数据科学与大数据技术专业培养体系研究（X2018JGYB038）</p>
+            <p>[11] 主持：四川省高校人文社会科学重点研究基地项目，推进川南城市群一体化的铁路网布局研究（XJQ003）；</p>
+            <p>[12] 主持：四川省教育厅高等教育教学改革研究项目，大学生创新创业教育中大数据创新思维及实践能力培养研究与实践（JG2018-446）；</p>
+            <p>[13] 主持：成都市哲学社会科学规划研究项目，成都市公众出行信息服务实施现状、问题与对策研究；</p>
+            <p>[14] 主持：成都市哲学社会科学规划研究项目，成都市智能交通发展战略研究；</p>
+            <p>[15] 主研：四川省全省政务调研专项课题，四川省新一代人工智能发展实施中专业人才的市场需求与现状研究；</p>
+            <p>[16] 主研：油气藏地质及开发工程国家重点实验室开放研究课题，页岩气孔隙网络建模技术；</p>
+            <p>[17] 主研：川东北天然气合作项目MRO库存优化管理研究；</p>
+            <p>[18] 主研：国药物流赛飞信息系统顶层设计；</p>
+            <p>[19] 主研：雷迪波尔信息系统规划；</p>
+            <p>[20] 主研：宜昌三峡物流园物流信息平台规划</p>
+
+            <p class="bold-text">代表性学术论文:</p>
+            <p>[1] 刘汉东,钟学燕等.一种改进GraphRNN的多标签文本分类方法[J].小型微型计算机系统,2023</p>
+            <p>[2] 支港,钟学燕等.基于Transformer 的序列生成多标签文本分类[J].山东大学学报（自然科学版）,2022.10</p>
+            <p>[3] 钟学燕,陈国青,孙磊磊,张明月,刘澜.基于多视角特征融合的移动信息服务模式挖掘[J].系统工程理论与实践,2018,38(07):1853-1861. (EI: 20184205953293)</p>
+            <p>[4] Graph neural network modeling for ethane recovery evaluation in RSV process.Geoenergy Science and Engineering.Volume 222, March 2023.(非第一作者)</p>
+            <p>[5] Mining Frequent Patterns with Counting Quantiﬁers. APWeb-WAIM 2022, LNCS 13421, pp. 372–381, 2023(非第一作者)</p>
+            <p>[6] An Interactive System For Knowledge Graph Search，The International Conference on Database Systems for Advanced Applications (DASFAA) , Korea ,2020.5.21- 2020.5.24(非第一作者)</p>
+            <p>[7] Zhong xueyan,Chen guoqing ,Sun leilei,Liulan. Data-driven Competitor Identification Using Text Mining and Word Network Analysis. 13th International FLINS Conference on Data Science and Knowledge Engineering for Sensing Decision Support 2018.8.22-24</p>
+            <p>[8] Zhongxueyan etc. Expressway Net work Planning of Multi-center Group Cities based on Traffic Location Theory: a Case Study of Guiyang. the Third International Conference on Transportation Engineering 2011.（EI）</p>
+            <p>[9] Zhongxueyan etc. Working-area Layout Method Study of Railway Logistics Park based on Genetic Algorithm. 2010 International Conference of Logistics Engineering and Management.(EI）</p>
+            <p>[10] 发明专利:基于小波分解与经验模态分解的异常电流诊断方法和系统[P],CN112881942B，2023-4-7</p>
+            <p>[11] 发明专利:一种古生物化石图像自动标注方法[P], CN113159112A，2023-4-7</p>
+            <p>[12] 发明专利:一种岩石薄片显微图像自动标注方法[P]:CN112784894B,2022-11-15</p>
+            <p>[13] 发明专利:一种基于隐马尔可夫模型的井下预警方法[P]:CN109902265B,2022-07-22</p>
+            <p>[14] 发明专利:一种利用二维薄片图像的数字岩心三维结构重建方法[P]:CN112381916B,2022-03-22</p>
+            <p>[15] 发明专利:一种基于时间递归神经网络的钻井事故预警模型[P]:CN109508827B,2022-04-29</p>
+            <p>[16] 发明专利：一种基于深度特征融合网络的砂岩薄片分割和识别方法[P]: CN113688956A,2021-11-23</p>
+            <p>[17] 发明专利：基于改进GraphRNN的多标签文本分类模型及分类方法[P]:CN113297385B,2021-09-28</p>
+            <p>[18] 发明专利：一种结合单偏光与正交偏光图像的岩石薄片图像对齐方法[P]: CN112614167A,2021-4-6</p>
+            <p>[19] 发明专利：基于平滑处理与网络模型机器学习的事故预测方法[P]: CN109829561B,2021-3-16</p>
+
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    function selectSection(section) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('selected'));
+        section.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>

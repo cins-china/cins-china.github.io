@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPing_introduce</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px; /* 设置固定宽度 */
+            margin: 40px auto; /* 垂直方向的边距和居中 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .section-title {
+            background-color: #BAC9D4; /* 标题背景颜色淡蓝色 */
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .section-content {
+            background-color: #f7f7f7; /* 模块内容背景颜色浅灰色 */
+            padding: 15px;
+            font-size: 16px;
+            position: relative;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        .teacher-avatar {
+            width: 100px; /* 固定宽度 */
+            height: 120px; /* 固定高度 */
+            border: 2px solid #ddd; /* 边框样式 */
+            position: absolute; /* 绝对定位 */
+            top: 15px; /* 距离顶部的距离 */
+            right: 15px; /* 距离右边的距离 */
+            border-radius: 10%; /* 设置为方形 */
+        }
+        .student-card {
+            display: flex;
+            align-items: flex-start; /* 内容靠上对齐 */
+            margin-bottom: 20px;
+        }
+        .student-info {
+            margin-left: 15px;
+            flex: 1; /* 让学生信息占用剩余空间 */
+        }
+        .student-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+        .student-description {
+            margin: 5px 0 0;
+            line-height: 1.5; /* 调整行间距，增加可读性 */
+            text-align: justify; /* 使内容对齐，增强美观性 */
+        }
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+        .selected {
+            background-color: yellow;
+        }
+
+        .bold-text {
+            font-weight: bold; /* 字体加粗 */
+            font-size: 16px; /* 调整字体大小 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> </h1>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">基本信息</h2>
+        <div class="section-content">
+            <p>姓名: 王换文</p>
+            <p>职称: 讲师</p>
+            <p>院系: 计算机与软件学院</p>
+            <p>联系方式: huanwenwang@swpu.edu.com</p>
+            <img src="assets/img/teacher/wanghuanwen.png" alt="导师头像" class="avatar teacher-avatar"> <!-- 替换为实际头像路径 -->
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">个人简历</h2>
+        <div class="section-content">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024年毕业于湖南大学信息科学与工程学院，获工学博士学位，博士期间曾在在加拿大多伦多大学联合培养一年。近年来，以第一作者在 Expert Systems with Application、KDD 等期刊、会议发表论文5篇，申请专利3项（其中2项已授权）。主研国家国家重点研发计划1项、国家自然科学基金2项。同时担任 Expert Systems with Application、ACM  Transactions on Multimedia Computing Communications and Application等权威SCI期刊审稿人。
+            </p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">主要研究方向</h2>
+        <div class="section-content">
+            <p>数据挖掘、图神经网络、推荐系统等</p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">代表性成果</h2>
+        <div class="section-content">
+            <p class="bold-text">论文</p>
+            <p>
+                [1] HuanwenWang,YawenZeng, JianguoChen, NingHan, HaoChen. Interval-enhanced Graph Transformer Solution for Session-based Recommendation. Expert Systems with Applications. 2023, 213: 118970.【SCI-1区】
+            </p>
+            <p>
+                [2] HuanwenWang,YawenZeng, JianguoChen, Zhouting Zhao, HaoChen. A Spatiotemporal Graph Neural Network for Session-Based Recommendation. Expert Systems with Applications. 2022, 202: 117114.【SCI-1区】
+            </p>
+            <p>
+                [3] HuanwenWang, GuanyiXiao, NingHan, HaoChen. Session-Based Graph Convolutional ARMA Filter Recommendation Model. IEEE ACCESS. 2020, 8:62053-62064.【SCI-3区】
+            </p>
+            <p>
+                [4] HuanwenWang, XiaoyaZhang, HaoChen. Embedded elbow vein blood collection robot system based on artificial intelligence technology. International Journal of Embedded Systems. 2023, 16(1): 36-46.【EI】
+            </p>
+            <p>
+                [5] Ning Han, Jingjing Chen, Hao Zhang,Huanwen Wang, Hao Chen. Adversarial Multi-Grained Embedding Network for Cross-Modal Text-Video Retrieval. ACM Transactions on Multimedia Computing, Communications, and Applications. 2022, 18(2): 1-23.【CCF-B，SCI-3区】
+            </p>
+            <p>
+                [6] Yawen Zeng,Huanwen Wang, Lingyu Chen, Wenshu Chen, Ran Chen, Hao Chen. HindRec: Aligning User Preferences for Recommendation via Hindsight Fine-tuning. In Proceedings of the 30th SIGKDD Conference on Knowledge Discovery and Data Minin. 2024.08【共同一作，CCF-A】
+            </p>
+
+            <P></P>
+            <p class="bold-text">专利</p>
+
+            <p>
+                [1] 王换文，曾雅文，陈浩 一种基于时间间隔增强的图神经网络推荐方法，CN202111117332.4, 2023-10-20，(已授权）
+            </p>
+            <p>
+                [2] 王换文，肖光意， 吴淇，蔡石林，陈浩， 彭依依，乔瑞秀一种用于在线增量预测食材的模型及方法，CN201910394683.6, 2023-04-18（已授权）
+            </p>
+            <p>
+                [3] 王换文，陈浩，陈建国，周文杰，陈雯姝，张银燕 一种基于时空序列图卷积网络的会话推荐方法，CN202010904114.4, 2020-12-04.（实审）
+            </p>
+
+            <P></P>
+            <p class="bold-text">参与项目</p>
+            <p>
+                [1] 开放协同的科技大数据服务平台构建与数据资源融合，国家重点研发计划子课题，2018YFB14026022019.07-2022.06，79.89万，主研（博士排第一）
+            </p>
+            <p>
+                [2] 云环境下近红外光谱大数据智能分析和多维特征建模算法研究，国家自然科学基金，61772190，2018.01-2021.12，63万，主研（硕士排名第一）
+            </p>
+            <p>
+                [3] 泛在网络环境下用户兴趣建模与移动推荐方法研究，国家自然科学基金，2015-2018，参与
+            </p>
+
+
+
+        </div>
+    </div>
+
+<!--    <div class="section" onclick="selectSection(this)">-->
+<!--        <h2 class="section-title">优秀毕业学生</h2>-->
+
+<!--    </div>-->
+</div>
+
+<script>
+    function selectSection(section) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('selected'));
+        section.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>
