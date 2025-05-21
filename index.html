@@ -1,1369 +1,1764 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>认知计算研究中心</title>
+    <style>
+        @media (min-width: 576px) {
+            .yh-container #yh_content {
+                max-width: 540px;
+            }
+        }
 
-  <head>
+        @media (min-width: 768px) {
+            .yh-container #yh_content {
+                max-width: 720px;
+            }
+        }
 
+        @media (min-width: 992px) {
+            .yh-container #yh_content {
+                max-width: 960px;
+            }
+        }
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--  <meta name="baidu-site-verification" content="">-->
-<!--  <meta name="google-site-verification" content="">-->
-  <link rel="canonical" href="http://localhost:4000/">
+        @media (min-width: 1200px) {
+            .yh-container #yh_content {
+                max-width: 1140px;
+            }
+        }
 
-  <title>ABOUT US</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Bootstrap core CSS -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        .yh-container {
+            padding-bottom: 42px;
+            box-sizing: border-box;
+        }
 
-  <!-- Custom fonts for this template -->
-  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        .yh-container .yh_commonImg {
+            width: 100%;
+        }
 
-  <!-- Custom styles for this theme -->
-  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
-  <link href="assets/css/agency.css" rel="stylesheet">
-  
-  <!-- Page container change top padding when nav shrinks -->
-  
-  
+        .yh-container .yh_commonImg img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .yh-container .yh_intro {
+            width: 100%;
+            font-family: PingFang SC, sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #666666;
+            line-height: 24px;
+            text-align: left;
+            margin: 30px 0 42px;
+            cursor: default;
+        }
+
+        .yh-container #yh_nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            border-bottom: 1px solid #DDDDDD;
+            margin-bottom: 44px;
+            background: white;
+            z-index: 10;
+        }
+
+        .yh-container #yh_nav ul {
+            cursor: pointer;
+            width: 25%;
+            position: relative;
+            padding: 8px 0;
+            transition: background-color 0.3s ease;
+            list-style: none;
+        }
+
+        .yh-container #yh_nav ul.yh_highLight {
+            background: #F5F6FA;
+        }
+
+        .yh-container #yh_nav ul .yh_yellowLine {
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #FFB64D;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .yh-container #yh_nav ul.yh_highLight .yh_yellowLine {
+            opacity: 1;
+        }
+
+        .yh-container #yh_nav li p {
+            font-family: PingFang SC, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #000000;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .yh-container #yh_nav li p:last-child {
+            font-weight: normal;
+            color: #666666;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .yh-container #yh_content {
+            position: relative;
+            min-height: 500px;
+            margin: 0 auto;
+        }
+
+        .yh-container #yh_content>div {
+            position: absolute;
+            width: 100%;
+            display: none;
+            transition: display 0.5s ease;
+        }
+
+        .yh-container #yh_content>div.yh_active {
+            display: block;
+            position: relative;
+        }
+
+        .yh-container #yh_content .yh_lipingPic {
+            position: relative;
+        }
+
+        .yh-container #yh_content .yh_lipingPic .yh_introBtn0 {
+            position: absolute;
+            bottom: 6%;
+            left: 3%;
+            width: 10%;
+            height: 15%;
+            border-radius: 30px;
+        }
+
+        .yh-container .yh_photoGrid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .yh-container .yh_photoItem {
+            width: calc((100% - 40px) / 3);
+            margin: 24px 20px 0 0;
+            position: relative;
+        }
+
+        .yh-container .yh_photoItem:nth-child(3n) {
+            margin-right: 0px;
+        }
+
+        .yh-container .yh_photoItem .yh_introBtn1 {
+            position: absolute;
+            bottom: 20%;
+            left: 8%;
+            width: 26%;
+            height: 18%;
+            border-radius: 30px;
+        }
+
+        .yh-container .yh_photoItem img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .yh-container .yh_verticalLine {
+            color: #DDDDDD;
+        }
+
+        .yh-container .yh_active .yh_marginBottom54 {
+            margin-bottom: 54px;
+        }
+
+        .yh-container .yh_smallTitle {
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 800;
+            font-size: 24px;
+            color: #000000;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .yh-container .yh_researchDirectionImg {
+            width: 100%;
+            margin-top: 24px;
+            margin-bottom: 42px;
+        }
+
+        .yh-container .yh_researchDirectionImg>img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .yh-container .yh_active .yh_displayFlexBetween {
+            display: flex;
+            /* 两端对齐 */
+            justify-content: space-between;
+            /* 垂直居中（可选） */
+            align-items: center;
+            /* 确保容器宽度足够 */
+            width: 100%;
+            padding-bottom: 32px;
+        }
+
+        .yh-container .yh_active .yh_displayFlexBetween .yh_paperBanner {
+            cursor: pointer;
+            color: #666;
+            border: 1px solid #DDDDDD;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 16px;
+            color: #666666;
+            font-style: normal;
+            text-transform: none;
+            padding: 6px 8px 8px 12px;
+        }
+
+        .yh-container .yh_active .yh_displayFlexBetween .yh_paperBanner:first-child {
+            margin-right: 12px;
+        }
+
+        .yh-container .yh_active .yh_displayFlexBetween .yh_textHighLight {
+            background-color: #0B6CB8;
+            color: #fff;
+        }
+
+        .yh-container .yh_active #yh_paperContent>div {
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive {
+            display: block;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem {
+            cursor: default;
+            padding: 24px 16px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem:has(.yh_paperArrow) {
+            cursor: pointer;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem:has(.yh_paperArrow):hover {
+            background-color: #F5F6FA;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem:has(.yh_paperArrow)>a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem:hover .yh_paperArrow {
+            color: #0B6CB8;
+        }
+
+        .yh-container .yh_active .yh_marginBottom42 {
+            margin-bottom: 42px;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem:first-child {
+            border-top: 1px solid #D9D9D9;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem>p {
+            color: #666;
+            opacity: 0.6;
+            font-size: 26px;
+            margin-left: 20px;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem .yh_paperTexts>p:first-child {
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 600;
+            font-size: 18px;
+            color: #000000;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem .yh_paperTexts>p:nth-child(2) {
+            font-family: ABeeZee, ABeeZee;
+            font-weight: normal;
+            font-size: 14px;
+            color: #666666;
+            font-style: italic;
+            margin: 16px 0;
+        }
+
+        .yh-container .yh_active #yh_paperContent .yh_paperActive .yh_paperItem .yh_paperTexts>p:last-child {
+            font-weight: 400;
+            font-size: 14px;
+            color: #0B6CB8;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem {
+            cursor: default;
+            padding: 16px;
+            box-sizing: border-box;
+            border: 1px solid #D9D9D9;
+            border-radius: 4px 4px 4px 4px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: bold;
+            font-size: 20px;
+            color: #000000;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+            margin-bottom: 12px;
+            transition: all 0.5s ease;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem:has(.yh_projectsResDet):hover {
+            background: #0B6CB8;
+            color: #fff;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem:first-child {
+            margin-top: 32px;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem:last-child {
+            margin-bottom: 0;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem #yh_accordionHeader>p {
+            font-size: 26px;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem #yh_accordionHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .yh-container .yh_active .yh_projectsResItemHighLight {
+            background: #0B6CB8;
+            border: none;
+            color: #fff;
+        }
+
+        .yh-container .yh_active .yh_projectsResItem .yh_projectsResDet {
+            font-weight: 400;
+            font-size: 12px;
+            color: #fff;
+            opacity: 0.6;
+            margin-top: 16px;
+            display: none;
+        }
+
+        .yh-container .yh_active .yh_academicItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 24px;
+            height: 130px;
+        }
+
+        .yh-container .yh_active .yh_academicItem:first-child {
+            margin-top: 32px;
+        }
+
+        .yh-container .yh_active .yh_academicItem:last-child {
+            margin-bottom: 54px;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemImg {
+            width: 25%;
+            height: 100%;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemImg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts {
+            cursor: pointer;
+            width: 70%;
+            height: 100%;
+            border-top: 1px solid #D9D9D9;
+            border-bottom: 1px solid #D9D9D9;
+            padding: 25px 16px 25px 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            position: relative;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts:hover {
+            background-color: #F5F6FA;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts:hover .yh_academicArrow {
+            color: #FFB64D;
+            font-weight: bold;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts p {
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 14px;
+            color: #666666;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts>p {
+            margin-left: 17px;
+            opacity: 0.6;
+            font-size: 26px;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts>div p:first-child {
+            font-weight: 600;
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 16px;
+        }
+
+        .yh-container .yh_active .yh_academicItem .yh_academicItemTexts>a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .yh-container .yh_active .yh_activities {
+            width: 100%;
+            height: 240px;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_activityItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_activityItem.active {
+            opacity: 1;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_activityItem .yh_actTexts {
+            width: 40%;
+            height: 100%;
+            background: #F5F6FA;
+            border: 1px solid #D9D9D9;
+            border-right: none;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 16px;
+            color: #666666;
+            line-height: 24px;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_activityItem .yh_actImg {
+            width: 60%;
+            height: 100%;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_activityItem .yh_actImg>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_carouselBtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.5s ease;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_carouselBtn:hover {
+            background: rgba(0, 0, 0, 0.2);
+            color: #FFB64D
+        }
+
+        .yh-container .yh_active .yh_activities .yh_prev {
+            left: 10px;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_next {
+            right: 10px;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_carouselDots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_dot {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .yh-container .yh_active .yh_activities .yh_dot.active {
+            background: #FFB64D;
+        }
+
+        /* 默认隐藏按钮和指示器 */
+        .yh-container .yh_active .yh_activities .yh_prev,
+        .yh-container .yh_active .yh_activities .yh_next,
+        .yh-container .yh_active .yh_activities .yh_carouselDots {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 鼠标悬停时显示按钮和指示器 */
+        .yh-container .yh_active .yh_activities:hover .yh_prev,
+        .yh-container .yh_active .yh_activities:hover .yh_next,
+        .yh-container .yh_active .yh_activities:hover .yh_carouselDots {
+            opacity: 1;
+        }
+
+        .yh-container .yh_active #yh_studentsNav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        .yh-container .yh_active #yh_studentsNav>span {
+            cursor: pointer;
+            border: 1px solid #DDDDDD;
+            padding: 10px 12px;
+        }
+
+        .yh-container .yh_active #yh_studentsNav>span:first-child {
+            margin-right: 12px;
+        }
+
+        .yh-container .yh_active #yh_studentsNav .yh_stuTextHighLight {
+            background: #0B6CB8;
+            color: #fff;
+        }
+
+        .yh-container .yh_active #yh_stuContent>div {
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive {
+            display: block;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem {
+            width: calc((100% - 40px) / 3);
+            height: 360px;
+            margin: 20px 20px 0 0;
+            position: relative;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem .yh_defaultCon {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2775b6;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d0dfe6;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem:nth-child(3n) {
+            margin-right: 0px;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem .yh_mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(11, 108, 184, 0.24) 0%, #0B6CB8 88%);
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem .yh_stuTexts {
+            width: 100%;
+            padding: 16px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-family: PingFang SC-Semibold;
+            font-weight: 600;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+            letter-spacing: 0.05em;
+            line-height: 24px;
+            overflow-wrap: break-word;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem .yh_stuTexts>p:first-child {
+            font-size: 18px;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem .yh_stuTexts .yh_maskAddContent {
+            margin-top: 12px;
+            display: none;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem .yh_stuTexts span {
+            font-family: PingFang SC, PingFang SC;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem:hover .yh_mask {
+            display: block;
+            opacity: 1;
+        }
+
+        .yh-container .yh_active #yh_stuContent .yh_stuActive .yh_stuPhotoGrid .yh_stuPhotoItem:hover .yh_maskAddContent {
+            display: block;
+            opacity: 1;
+        }
+    </style>
 </head>
+<body>
+<div class="yh-container" id="app">
+    <!-- 内容将通过JavaScript动态生成 -->
+</div>
 
-  <style>
+<script>
+    // 研究中心数据
+    const researchCenterData = {
+        // 研究中心横幅图片
+        banner: {
+            image: "./imgs/banner_slices/banner.png",
+            alt: "研究中心横幅"
+        },
+        // 团队介绍内容
+        introduction: "中心成立于2011年7月，依托西南石油大学计算机与软件学院，是西南石油大学校级研究中心。中心主要从事图机器学习、自然语言处理、网络科学、数据智能、视觉智能等交叉学科的应用基础研究，承担了包括国家自然科学基金在内的多项纵横向研究项目，在国际顶级会议、期刊上发表论文100余篇，授权国家发明专利多项。中心职员由具有相当科研经验的青年教师团队和充满朝气，思想活跃的众多研究生组成。中心拥有200平方的独立实验室，具有温馨和谐，团结互助的科学研究氛围。欢迎志同道合的同学们加入我们！",
 
-      .card {
-          border: 1px solid #ccc; /* 卡片边框 */
-          border-radius: 10px; /* 卡片圆角 */
-          padding: 20px; /* 卡片内边距 */
-          margin: 20px 0; /* 卡片外边距 */
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 卡片阴影 */
-          background-color: #e9e7ef; /* 卡片背景色 */
-      }
+        // 导航标签和内容
+        tabs: [
+            {   // 导师团队
+                title: "导师团队＋",
+                subtitle: "MENTOR TEAM",
+                content: {
+                    titleImage: "./imgs/bigTitles/title1_slices/title1.png",
+                    mainTeacher: {
+                        image: "./imgs/teachers_slices/liping_slices/liping.png",
+                        alt: "李平老师",
+                        link: "https://cins-china.github.io/LiPing_introduce.html"
+                    },
+                    teachers: [
+                        {
+                            image: "./imgs/teachers_slices/liuying_slices/liuying.png",
+                            alt: "刘影老师",
+                            link: "https://cins-china.github.io/Liuyin_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/zhongxueyan_slices/zhongxueyan.png",
+                            alt: "钟学燕老师",
+                            link: "https://cins-china.github.io/Zhongxueyan_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/zhongyuan_slices/zhongyuan.png",
+                            alt: "钟原老师",
+                            link: "https://cins-china.github.io/ZhongYuan_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/liangxiao_slices/liangxiao.png",
+                            alt: "梁晓老师",
+                            link: "https://cins-china.github.io/liangxiao_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/aoyongcai_slices/aoyongcai.png",
+                            alt: "敖永才老师",
+                            link: "https://cins-china.github.io/aoyongcai_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/wangjianbo_slices/wangjianbo.png",
+                            alt: "王建波老师",
+                            link: "https://cins-china.github.io/wangjianbo_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/wanghuanwen_slices/wanghuanwen.png",
+                            alt: "王换文老师",
+                            link: "https://cins-china.github.io/wanghuanwen_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/zhangyun_slices/zhangyun.png",
+                            alt: "张韵老师",
+                            link: "https://cins-china.github.io/zhangyun_introduce.html"
+                        },
+                        {
+                            image: "./imgs/teachers_slices/caoyu_slices/caoyu.png",
+                            alt: "曹宇老师",
+                            link: "https://cins-china.github.io/chaoyu_introduce.html"
+                        },
+                    ]
+                }
+            },
+            {   // 研究与成果
+                title: "研究与成果＋",
+                subtitle: "RESEARCH & ACHIEVEMENTS",
+                content: {
+                    titleImage: "./imgs/bigTitles/title2_slices/title2.png",
+                    researchDirections: {
+                        title: "研究方向",
+                        image: "./imgs/research/researchDirection_slices/researchDirection.png"
+                    },
+                    papers: {
+                        title: "论文成果",
+                        types: ["近期部分会议论文", "近期部分期刊论文"],
+                        list: [
+                            [ // 会议论文
+                                {
+                                    title: "Enriching molecular graph representation via substructure learning",
+                                    authors: "HongHao Wang, Acong Zhang, Ping Li.",
+                                    conference: "International Conference onBioinformatics and Biomedicine (BIBM 2024)",
+                                    isNew: true,
+                                    link: null
+                                },
+                                {
+                                    title: "Chain-aware graph neural networks for molecular property prediction",
+                                    authors: "Honghao Wang, Acong Zhang, Yuan Zhong, Junlei Tang, Kai Zhang, Ping Li.",
+                                    conference: "Bioinformatics(2024)",
+                                    isNew: true,
+                                    link: "https://academic.oup.com/bioinformatics/article/40/10/btae574/7818417?login=false"
+                                },
+                                {
+                                    title: "High-Order Contrastive Learning with Fine-grained Comparative Levels for Sparse Ordinal Tensor Completion",
+                                    authors: "Yu Dai, Junchen Shen, Zijie Zhai, Danlin Liu, Jingyang Chen, Yu Sun, Ping Li, Jie Zhang, Kai Zhang",
+                                    conference: "Forty-First International Conference on Machine Learning (ICML) , 2024",
+                                    isNew: false,
+                                    link: null
+                                },
+                                {
+                                    title: "Unsupervised Monte Carlo Denoising via Learning Contrastive Disentanglement Representation",
+                                    authors: "Xiao Liang, Siyuan Duan.",
+                                    conference: "IEEE International Conference on Multimedia and Expo, 2024",
+                                    isNew: false,
+                                    link: null
+                                },
+                                {
+                                    title: "HindRec: Aligning User Preferences for Recommendation via Hindsight Fine-tuning",
+                                    authors: "Yawen Zeng,Huanwen Wang, Lingyu Chen, Wenshu Chen, Ran Chen, Hao Chen.",
+                                    conference: "In Proceedings of the 30th SIGKDD Conference on Knowledge Discovery and Data Minin, 2024",
+                                    isNew: false,
+                                    link: null
+                                },
+                                // 其他会议论文...
+                            ],
+                            [ // 期刊论文
+                                {
+                                    title: "基于节点中心性排序和交替乘子法的网络重构",
+                                    authors: "王建波, 刘江华, 杜占玮, 李平, 许小可.",
+                                    conference: "中国科学：信息科学, 2025",
+                                    isNew: true,
+                                    link: "https://www.sciengine.com/SSI/doi/10.1360/SSI-2024-0276"
+                                },
+                                {
+                                    title: "Epidemic spread dynamics in multilayer networks: Probing the impact of information outbreaks and reception games",
+                                    authors: "Jianbo Wang Haoxing He Ping Li Zhanwei Du Xiaoke Xu.",
+                                    conference: "Chaos, 2025",
+                                    isNew: true,
+                                    link: "https://pubs.aip.org/aip/cha/article-abstract/35/3/033118/3338792/Epidemic-spread-dynamics-in-multilayer-networks?redirectedFrom=fulltext"
+                                },
+                                {
+                                    title: "CWIIIF: A Novel Algorithm for Identifying Influential Nodes in Multilayer Networks",
+                                    authors: "Jianbo Wang; Yu Luo; Zhanwei Du; Ping Li; Xiao-Ke Xu.",
+                                    conference: "IEEE Transactions on Computational Social Systems, 2025",
+                                    isNew: true,
+                                    link: "https://ieeexplore.ieee.org/abstract/document/10930885"
+                                },
+                                {
+                                    title: "Identifying influential nodes in spreading process in complex networks by integrating node dynamic propagation features and local structure",
+                                    authors: "HOU Shiyu, LIU Ying, TANG Ming.",
+                                    conference: "Acta Phys. Sin.(2025)",
+                                    isNew: true,
+                                    link: null
+                                },
+                                {
+                                    title: "Minicolumn-based episodic memory model with spiking neurons, dendrites and delays",
+                                    authors: "Zhang Yun, Chen Yi, et al.",
+                                    conference: "IEEE Transactions on Neural Networks and Learning Systems, 2024",
+                                    isNew: false,
+                                    link: null
+                                },
+                                {
+                                    title: "DPGCL: Dual pass filtering based graph contrastive learning",
+                                    authors: "Rui Huang, Ping Li*, Kai Zhang",
+                                    conference: "Neural Networks，2024",
+                                    isNew: false,
+                                    link: null
+                                },
+                                {
+                                    title: " Message Passing on Semantic-Anchor-Graphs for Fine-grained Emotion Representation Learning and Classification",
+                                    authors: "Pinyi Zhang,  Ping Li, Jie Zhang, and Kai Zhang",
+                                    conference: "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing（EMNLP 2024）",
+                                    isNew: false,
+                                    link: null
+                                },
+                                // 其他期刊论文...
+                            ]
+                        ]
+                    },
+                    projects: [
+                        {
+                            title: "水电站泄洪预警无线广播系统",
+                            description: null
+                        },
+                        {
+                            title: "水电监控信号矛盾性异常识别模型研究报告",
+                            description: "信号量大/重复信号多/包含无用信号(检修)/异常信号难以直接挖掘。需要提出一种矛盾性异常识别方法。"
+                        },
+                        {
+                            title: "天然气深冷装置关键工艺参数智能优化研究与应用",
+                            description: "本项目结合天然气深冷装置关键工艺设备的运行情况，开展大数据分析的研究和应用。"
+                        },
+                        {
+                            title: "水电设备监控噪声信号智能过滤技术方案",
+                            description: null
+                        },
+                        {
+                            title: "天然气深冷装置关键工艺参数智能优化研究与应用",
+                            description: "项目以大数据、深度学习、图神经网络挖掘技术为主要手段，将现有的DCS系统的过程实时数据和生产信息集成，建立深冷装置液态产品产量的智能算法模型，实时监测深冷装置运行状态，提出关键工艺参数优化策略并指导实施，以期达到有效提高对天然气深冷装置生产特征和运行规律的认识，提高运行效率和效益，实现精简化、智能化管理的目的。"
+                        },
+                        // 其他项目...
+                    ]
+                }
+            },
+            {   // 团队活动
+                title: "团队活动＋",
+                subtitle: "TEAM ACTIVITIES",
+                content: {
+                    titleImage: "./imgs/bigTitles/title3_slices/title3.png",
+                    // 学术交流
+                    academicExchanges: [
+                        {
+                            title: "走近西南石油大学优秀导师伯乐奖获奖者",
+                            subtitle: "The announcement of the 2024 Southwest Petroleum University Outstanding Mentor Bole Award!",
+                            image: "./imgs/news/news1.jpg",
+                            link: "https://mp.weixin.qq.com/s/VaREtKOUkvu39awl_IcDQw"
+                        },
+                        {
+                            title: "我院研究成果入选生物信息学旗舰会议BIBM2024",
+                            subtitle: "The research achievements of our school have been selected for the flagship conference of bioinformatics, BIBM 2024!",
+                            image: "./imgs/news/news2.jpg",
+                            link: "https://www.swpu.edu.cn/scs/info/1045/8134.htm"
+                        },
+                        // 其他学术交流...
+                    ],
+                    // 团建活动
+                    teamBuilding: [
+                        {
+                            text: "夕阳西下，我们暂别繁忙，在绿意盎然的营地相聚。午后围坐品茶，谈笑风生；桌游竞技，欢乐不断。夜幕降临，炭火燃起，烤肉飘香，大家协作分享，暖意融融。星光为伴，笑声回荡，这场轻松惬意的露营之旅，让团队情谊更加深厚。✨🏕️",
+                            image: "./imgs/activities/1.jpg"
+                        },
+                        {
+                            text: "夕阳西下，我们暂别繁忙，在绿意盎然的营地相聚。午后围坐品茶，谈笑风生；桌游竞技，欢乐不断。夜幕降临，炭火燃起，烤肉飘香，大家协作分享，暖意融融。星光为伴，笑声回荡，这场轻松惬意的露营之旅，让团队情谊更加深厚。✨🏕️",
+                            image: "./imgs/activities/2.jpg"
+                        },
+                        {
+                            text: "夕阳西下，我们暂别繁忙，在绿意盎然的营地相聚。午后围坐品茶，谈笑风生；桌游竞技，欢乐不断。夜幕降临，炭火燃起，烤肉飘香，大家协作分享，暖意融融。星光为伴，笑声回荡，这场轻松惬意的露营之旅，让团队情谊更加深厚。✨🏕️",
+                            image: "./imgs/activities/3.jpg"
+                        },
+                        {
+                            text: "课后之余，师生欢聚一堂，共赴美食之约。席间畅谈学术与生活，思维碰撞，笑语盈盈。餐后合影定格珍贵瞬间，镜头里是亦师亦友的温情，更是携手同行的学术情谊。这一刻，我们不仅是课堂上的伙伴，更成为彼此科研路上的温暖同行者。📚✨",
+                            image: "./imgs/activities/4.jpg"
+                        },
+                        {
+                            text: "春风化雨，桃李芬芳。在师兄毕业的荣光时刻，师生同框定格珍贵画面。导师的期许、同门的祝福，都凝聚在这张满载回忆的合影中。师弟师妹接过学术接力棒，传承实验室精神。愿师兄前程似锦，我们继续在科研路上并肩同行。🎓📸",
+                            image: "./imgs/activities/5.jpg"
+                        },
+                    ]
+                }
+            },
+            {   // 优秀学生
+                title: "优秀学生＋",
+                subtitle: "ELITE STUDENTS",
+                content: {
+                    titleImage: "./imgs/bigTitles/title4_slices/title4.png",
+                    studentTypes: ["优秀毕业生", "优秀在校生"],
+                    students: [
+                        [ // 优秀毕业生
+                            {
+                                name: "余兰兰",
+                                degree: "博士",
+                                image: "./imgs/graduateStudents/yulanlan.jpg",
+                                time: "2017.09-2020.06",
+                                status: "四川大学在读博士",
+                                honors: "发表SCI论文3篇，获二等研究生学业奖学金，获三等全国研究生数学建模，提名2020年度ACM成都分会“优秀研究生论文奖”。"
+                            },
+                            {
+                                name: "黄金诚",
+                                degree: "博士",
+                                image: "./imgs/graduateStudents/huangjincheng.jpg",
+                                time: "2020.09-2023.06",
+                                status: "电子科技大学，新加坡科技设计大学访问博士生",
+                                honors: "第一/共一作者发表CCF A类会议论文1篇，SCI论文2篇，获国家奖学金1次，优秀研究生，研究生优秀毕业论文等。",
+                                intro: "https://huangjc0429.github.io/JinchengHuang.github.io/"
+                            },
+                            {
+                                name: "王泓淏",
+                                degree: "博士",
+                                image: "./imgs/graduateStudents/wanghonghao.png",
+                                time: "2022.09-2025.06",
+                                status: "厦大博士在读",
+                                honors: "发表ccfb两篇，校级优秀毕业生。"
+                            },
+                            {
+                                name: "赵培",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/zhaopei.jpg",
+                                time: "2013.09-2016.06",
+                                status: "四川港投数智公司技术部副总监，高级工程师职称，高级系统架构设计师职业资格，担任西南石油大学研究生校外导师。",
+                                honors: "荣获三届“港投工匠”荣誉称号，历年荣获四川省数智工匠大赛、人工智能工程技术等竞赛二等奖、三等奖、优胜奖等多项省级及以上荣誉，获得国家发明专利及实用新型专利十余项，在Scientific Reports等期刊发表过多篇学术论文，主导过多个省、市级大数据项目研发及交付。"
+                            },
+                            {
+                                name: "刘婷",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/liuting.jpg",
+                                time: "2014.09-2017.06",
+                                status: "慧择.算法工程师",
+                                honors: "发表SCI论文1篇，获国家奖学金3次，校长奖学金1次。"
+                            },
+                            {
+                                name: "朱鹏军",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/zhupengjun.jpg",
+                                time: "2015.09-2018.06",
+                                status: "西门子（中国）有限公司",
+                                honors: null
+                            },
+                            {
+                                name: "文敏",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/wenmin.jpg",
+                                time: "2016.09-2019.06",
+                                status: "招银网络科技-算法工程师",
+                                honors: "发表SCI论文1篇"
+                            },
+                            {
+                                name: "朱婷婷",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/zhutingting.jpg",
+                                time: "2016.9-2019.6",
+                                status: null,
+                                honors: "3次研究生一等学业奖学金、校级“优秀研究生干部”、“校级优秀毕业生”,3次全国研究生创新实践系列活动之数学建模竞赛国家三等奖,2018年全国大学生英语竞赛(NECCS)A类国家级二等奖,研究生读书沙龙分享会三等奖、校级21天遇见更好的自己优胜奖、研究生英语演讲大赛优胜奖.发表一篇SC二区论文、一篇KDD的Workshop论文（poster）；专利在校期间应该都只是公开处于实质审查期就不写了，一篇SCI 2区论文在校期间处于二审阶段毕业后被接收的论文。"
+                            },
+                            {
+                                name: "代臻",
+                                degree: "硕士",
+                                time: "2017.09-2020.06",
+                                status: "中国工商银行",
+                                honors: "发表SCI论文2篇，获国家奖学金1次"
+                            },
+                            {
+                                name: "王标",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/wangbiao.jpg",
+                                time: "2018.09-2021.06",
+                                status: "中国环境科学研究院工程师",
+                                honors: "发表SCI论文2篇，授权发明专利1项，院奖学金3次，数学建模奖项3项，大学生创新创业奖项1项"
+                            },
+                            {
+                                name: "黄罗杰",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/huangluojie.jpg",
+                                time: "2018.09-2021.06",
+                                status: "华能供应链公司开发",
+                                honors: null
+                            },
+                            {
+                                name: "张巍",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/zhangwei.jpg",
+                                time: "2019.09-2022.06",
+                                status: "中共邻水县委宣传部(网信办)",
+                                honors: "发表SCI论文1篇，专利1个"
+                            },
+                            {
+                                name: "杨洋",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/yangyang.jpg",
+                                time: "2019.9-2022.6",
+                                status: "英特尔",
+                                honors: "获国家奖学金3次，四川省优秀毕业生。"
+                            },
+                            {
+                                name: "李丽",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/lili.jpg",
+                                time: "2020.09-2023.06",
+                                status: "四川科技职业学院/专任教师",
+                                honors: "发表中文核心论文1篇，授权发明专利1项，获奖学金2次，获优秀研究生干部荣誉1次。"
+                            },
+                            {
+                                name: "黄恺文",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/huangkaiwen.jpg",
+                                time: "2020.09-2023.06",
+                                status: "成都市公安局天府新区分局人民警察",
+                                honors: "发表CCF A类期刊论文 1 篇，SCI 二区论文 2 篇，CCF C 类会议论文 1 篇，获中国石油奖学金 1 次，研究生学业奖学金一等奖 1 次，优秀学生干部，优秀团员干部。"
+                            },
+                            {
+                                name: "李攀",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/lipan.jpg",
+                                time: "2021.09-2024.06",
+                                status: "国家图书馆",
+                                honors: "发表NLP顶会EMNLP一篇，发表SCI Q1一篇，国家奖学金、校长奖学金、全国研究数学建模大赛三等奖2次、四川省优秀毕业生、四川省综合A级证书、第八届飞翔奖入围，提名、一等学业奖学金、二等学业奖学金、校优秀毕业生、优秀研究生2次、优秀团员3次、优秀志愿者等校级及以上40余项。"
+                            },
+                            {
+                                name: "胡诗琪",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/hushiqi.png",
+                                time: "2021.09-2024.06",
+                                status: "四川省人力资源和社会保障厅",
+                                honors: "发明专利一项"
+                            },
+                            {
+                                name: "李国伟",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/liguowei.jpg",
+                                time: "2021.09-2024.06",
+                                status: "中国人民解放军32076部队文职",
+                                honors: "发表SCI论文1篇"
+                            },
+                            {
+                                name: "黄睿",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/huangrui.jpg",
+                                time: "2021.09-2024.06",
+                                status: "成都市公安局民警",
+                                honors: "发表SCI 1区论文2篇"
+                            },
+                            {
+                                name: "赵晋松",
+                                degree: "硕士",
+                                image: "./imgs/graduateStudents/zhaojinsong.jpg",
+                                time: "2021.09-2024.06",
+                                status: "武侯人社局",
+                                honors: "发表SCI论文2篇，获得一等奖学金一次、三等奖学金一次、四川省优秀毕业生、四川省大学生乒乓球团体冠军、单打冠军。"
+                            },
+                            {
+                                name: "李雅杰",
+                                degree: "硕士",
+                                image: null,
+                                time: "2022.09-2025.06",
+                                status: null,
+                                honors: "中共党员，学院研究生会主席，二等学业奖学金2次，三等学业奖学金，四川省综合素质A级证书，优秀毕业生，优秀研究生，优秀共青团干部，优秀组织奖，北大核心一作，英语四六级，普通话二甲，体育舞蹈大赛团队一等奖，优秀团队二等奖，突出贡献奖，代表学院参加研究生代表大会，共青团代表大会，青马工程等。"
+                            },
+                            // TODO:
+                            // 其他优秀毕业生...
+                        ],
+                        [ // 优秀在校生
+                            // TODO:
+                            // {
+                            //     name: "李攀",
+                            //     degree: "硕士",
+                            //     image: "./imgs/graduateStudents/lipan.jpg",
+                            //     grade: "研二",
+                            //     honors: '《蓝桥杯全国软件和信息技术专业人才大赛》四川省一等奖 《ACM四川省大学生程序设计大赛》 四川省金奖 《中国"互联网+"大学生创新创业大赛》 银奖',
+                            //     papers: "《从扩展ER模型到XML模式自动转换的算法研究》2024.11，20卷，11期… 《XML文档到关系数据库的映射策略》,《计算机工程》，20125.03，36卷…"
+                            // },
+                            // 其他优秀在校生...
+                        ],
+                    ]
+                }
+            }
+        ]
+    };
 
-      .card-body {
-          font-size: 20px; /* 字体大小 */
-          text-align: justify; /* 文字两端对齐 */
-          line-height: 2; /* 行高增加 */
-          color: #333; /* 字体颜色 */
-          /**/
-      }
+    // 渲染页面
+    function renderPage() {
+        const app = document.getElementById('app');
 
-      .card-text {
-          text-indent: 2em; /* 首行空两格 */
-          margin-bottom: 0; /* 去掉段落的默认外边距 */
-      }
-      @keyframes colorChange {
-          0% {
-              color: #e0e0e0;
-          }
-          30% {
-              color: #9db5d8;
-          }
-          40% {
-              color: #7a87e6;
-          }
-          50% {
-              color: #5c6bc0;
-          }
-          60% {
-              color: #4a4ab4;
-          }
-          70% {
-              color: #5c6bc0;
-          }
-          80% {
-              color: #7a87e6;
-          }
-          90% {
-              color: #9db5d8;
-          }
-          100% {
-              color: #e0e0e0;
-          }
-      }
+        // 1. 渲染横幅
+        app.appendChild(createBanner());
 
+        // 2. 渲染介绍文本
+        app.appendChild(createIntroduction());
 
-      .dynamic-color {
-          /*animation: colorChange 10s infinite; !* 动画持续时间和循环 *!*/
-          animation: colorChange 10s ease-in-out infinite;
-          font-size: 38px; /* 增大字体大小 */
-          font-family: 'Montserrat', sans-serif; /* 使用Arial字体，或者你可以选择其他字体 */
-          text-decoration: none; /* 去除下划线 */
-          font-weight: bold;
-      }
-      .dynamic-color:hover{
-          color: black;
-          text-decoration: none;
-      }
+        // 3. 渲染导航栏
+        app.appendChild(createNavigation());
 
-      .clickable-link {
-          background-color: black; /* 背景颜色 */
-          color: white; /* 文字颜色 */
-          padding: 2px 30px; /* 内边距 */
-          text-align: center; /* 文字居中 */
-          text-decoration: none; /* 去除下划线 */
-          display: inline-block; /* 行内块级元素 */
-          border: 1px solid black; /* 黑色边框 */
-          border-radius: 3px; /* 圆角边框 */
-          transition: background-color 0.3s, color 0.3s; /* 过渡效果 */
-      }
+        // 4. 渲染内容区域
+        app.appendChild(createContentArea());
 
-      /* 鼠标悬停时的样式变化 */
-      .clickable-link:hover {
-          background-color: white;
-          color: black;
-          border: 1px solid white; /* 黑色边框 */
-          text-decoration: none; /* 去除下划线 */
-      }
+        // 初始化交互功能
+        initInteractions();
+    }
 
-      .row {
-          display: flex;
-          flex-wrap: wrap;
-      }
+    // 创建横幅
+    function createBanner() {
+        const bannerDiv = document.createElement('div');
+        bannerDiv.className = 'yh_commonImg';
 
-      .col-sm-2 {
-          flex: 0 0 20%;
-          max-width: 20%;
-          padding: 10px;
-      }
+        const img = document.createElement('img');
+        img.src = researchCenterData.banner.image;
+        img.alt = researchCenterData.banner.alt;
+        img.style.maxWidth = '100%';
 
-      .initials-avatar {
-          width: 150px;
-          height: 170px;
-          background-color: #2775b6; /* 背景颜色 */
-          border-radius: 50%; /* 圆形 */
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: auto;
-          font-size: 24px; /* 字体大小 */
-          font-weight: bold; /* 字体加粗 */
-          color: #d0dfe6; /* 字体颜色 */
-      }
+        bannerDiv.appendChild(img);
+        return bannerDiv;
+    }
 
+    // 创建介绍文本
+    function createIntroduction() {
+        const introP = document.createElement('p');
+        introP.className = 'yh_intro';
+        introP.textContent = researchCenterData.introduction;
+        return introP;
+    }
 
+    // 创建导航栏
+    function createNavigation() {
+        const navDiv = document.createElement('div');
+        navDiv.id = 'yh_nav';
 
-      /*这里*/
-      .student-container {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr); /* 创建5列，每列占据等宽 */
-          grid-gap: 10px; /* 设置列与列之间的间距 */
-          width: 100%; /* 容器宽度为100% */
-      }
+        researchCenterData.tabs.forEach((tab, index) => {
+            const ul = document.createElement('ul');
+            if (index === 0) ul.classList.add('yh_highLight');
+            ul.onclick = () => switchTab(index);
 
-      .team-member {
-          flex: 0 1 19%; /* 每个学生项占19%的宽度 */
-          text-align: center;
-          margin-bottom: 20px;
-      }
+            const li = document.createElement('li');
+            const titleP = document.createElement('p');
+            titleP.textContent = tab.title;
+            const subtitleP = document.createElement('p');
+            subtitleP.textContent = tab.subtitle;
 
-      .team-member img {
-          width: 150px;
-          height: 170px;
-          border-radius: 50%; /* 圆形头像 */
-      }
+            li.appendChild(titleP);
+            li.appendChild(subtitleP);
+            ul.appendChild(li);
 
+            const yellowLine = document.createElement('p');
+            yellowLine.className = 'yh_yellowLine';
+            if (index === 0) yellowLine.style.opacity = '1';
+            ul.appendChild(yellowLine);
 
+            navDiv.appendChild(ul);
 
-      .extra-students {
-          display: none; /* 默认隐藏多余的学生信息 */
-      }
+            // 添加分隔线（最后一个不添加）
+            if (index < researchCenterData.tabs.length - 1) {
+                const line = document.createElement('p');
+                line.className = 'yh_verticalLine';
+                line.textContent = '|';
+                navDiv.appendChild(line);
+            }
+        });
 
-      .extra-students.show {
-          display: flex; /* 当显示时，保持与正常学生容器相同的布局 */
-          flex-wrap: wrap;
-      }
+        return navDiv;
+    }
 
-      /* 控制显示更多和收起的样式 */
-      #toggle-button {
-          border: none; /* 移除边框 */
-          background-color: transparent; /* 透明背景 */
-          color: #003472; /* 蓝色文字 */
-          font-size: 16px;
-          display: inline-flex;
-          align-items: center; /* 垂直居中对齐 */
-          cursor: pointer;
-          outline: none; /* 移除点击时的外边框 */
-          transition: color 0.3s ease; /* 颜色渐变效果 */
-      }
+    // 创建内容区域
+    function createContentArea() {
+        const contentDiv = document.createElement('div');
+        contentDiv.id = 'yh_content';
 
-      #toggle-button:hover {
-          border: none; /* 移除边框 */
-          color: #0056b3; /* 鼠标悬停时颜色变深 */
-      }
+        researchCenterData.tabs.forEach((tab, index) => {
+            const tabContent = document.createElement('div');
+            tabContent.className = index === 0 ? 'yh_active' : '';
 
-      /* 箭头指示器样式 */
-      #toggle-button .arrow {
+            // 根据标签类型渲染不同内容
+            switch (index) {
+                case 0: // 导师团队
+                    tabContent.appendChild(createTeachersContent(tab.content));
+                    break;
+                case 1: // 研究与成果
+                    tabContent.appendChild(createResearchContent(tab.content));
+                    break;
+                case 2: // 团队活动
+                    tabContent.appendChild(createActivitiesContent(tab.content));
+                    break;
+                case 3: // 优秀学生
+                    tabContent.appendChild(createStudentsContent(tab.content));
+                    break;
+            }
 
-          display: inline-block;
-          margin-left: 5px;
-          transition: transform 0.3s ease; /* 动画效果 */
-      }
+            contentDiv.appendChild(tabContent);
+        });
 
-      /* 箭头指示器旋转样式 */
-      .arrow.up {
+        return contentDiv;
+    }
 
-          transform: rotate(180deg); /* 向上旋转180度 */
-      }
+    // 创建导师团队内容
+    function createTeachersContent(content) {
+        const fragment = document.createDocumentFragment();
 
-      .graudestyleone{
-          font-size: 16px;
-          font-weight: 400;
-          font-style: italic;
-          margin-bottom: 30px;
-          ext-transform: none;
-          font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-      }
-      .graudestyletwo{
-          font-size: 15px;
-          font-weight: 400;
-          /*font-style: italic;*/
-          margin-bottom: 75px;
-          ext-transform: none;
-          font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-      }
-  </style>
+        // 标题图片
+        const titleImg = document.createElement('div');
+        titleImg.className = 'yh_commonImg';
+        titleImg.innerHTML = `<img src="${content.titleImage}" alt="导师团队" style="max-width:100%;">`;
+        fragment.appendChild(titleImg);
 
+        // 主要导师
+        const mainTeacherDiv = document.createElement('div');
+        mainTeacherDiv.className = 'yh_commonImg yh_lipingPic';
+        mainTeacherDiv.innerHTML = `
+                <img src="${content.mainTeacher.image}" alt="${content.mainTeacher.alt}" style="max-width:100%;">
+                <a class="yh_introBtn0" href="${content.mainTeacher.link}" target="_blank"></a>
+            `;
+        fragment.appendChild(mainTeacherDiv);
 
-  <body id="page-top">
+        // 导师网格
+        const gridDiv = document.createElement('div');
+        gridDiv.className = 'yh_photoGrid';
 
+        content.teachers.forEach(teacher => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'yh_photoItem';
+            itemDiv.innerHTML = `
+                    <img src="${teacher.image}" alt="${teacher.alt}">
+                    <a class="yh_introBtn1" href="${teacher.link}" target="_blank"></a>
+                `;
+            gridDiv.appendChild(itemDiv);
+        });
 
+        fragment.appendChild(gridDiv);
+        return fragment;
+    }
 
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-	  <a class="navbar-brand js-scroll-trigger" href="#page-top">UP</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#timeline">About</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#researches">Researches</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-	    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#papers">Papers</a></li>
-	    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">Projects</a></li>
-	    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#xinwen">News</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#graduate">Alumni</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End Navigation -->
-  
-  <!-- Header -->
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text"><div class="intro-heading text-uppercase"><p>认知计算研究中心</p>
-    </div><a class="dynamic-color " href="#timeline">Tell Me More</a></div>
-    </div>
-  </header>
-  <!-- End Header -->
-        <!-- About -->
-        <section class="page-section" id="timeline">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase"><p>关于我们</p>
-                        </h2>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    中心成立于2011年7月，依托西南石油大学计算机与软件学院，是西南石油大学校级研究中心。中心主要从事图机器学习、自然语言处理、网络科学、数据智能、视觉智能等交叉学科的应用基础研究，承担了包括国家自然科学基金在内的多项纵横向研究项目，在国际顶级会议、期刊上发表论文100余篇，授权国家发明专利多项。中心职员由具有相当科研经验的青年教师团队和充满朝气，思想活跃的众多研究生组成。中心拥有200平方的独立实验室，具有温馨和谐，团结互助的科学研究氛围。欢迎志同道合的同学们加入我们！
-                                </p>
+    // 创建研究与成果内容
+    function createResearchContent(content) {
+        const fragment = document.createDocumentFragment();
+
+        // 标题图片
+        const titleImg = document.createElement('div');
+        titleImg.className = 'yh_commonImg yh_marginBottom54';
+        titleImg.innerHTML = `<img src="${content.titleImage}" alt="研究与成果" style="max-width:100%;">`;
+        fragment.appendChild(titleImg);
+
+        // 研究方向
+        const researchDiv = document.createElement('div');
+        const researchTitle = document.createElement('p');
+        researchTitle.className = 'yh_smallTitle';
+        researchTitle.textContent = content.researchDirections.title;
+        researchDiv.appendChild(researchTitle);
+
+        const researchImg = document.createElement('div');
+        researchImg.className = 'yh_researchDirectionImg';
+        researchImg.innerHTML = `<img src="${content.researchDirections.image}" alt="研究方向">`;
+        researchDiv.appendChild(researchImg);
+
+        fragment.appendChild(researchDiv);
+
+        // 论文成果
+        const papersDiv = document.createElement('div');
+        papersDiv.className = 'yh_marginBottom42';
+
+        const papersHeader = document.createElement('div');
+        papersHeader.className = 'yh_displayFlexBetween';
+
+        const papersTitle = document.createElement('p');
+        papersTitle.className = 'yh_smallTitle';
+        papersTitle.textContent = content.papers.title;
+        papersHeader.appendChild(papersTitle);
+
+        const papersNav = document.createElement('div');
+        papersNav.id = 'yh_paperButtons';
+
+        content.papers.types.forEach((type, i) => {
+            const span = document.createElement('span');
+            span.className = 'yh_paperBanner' + (i === 0 ? ' yh_textHighLight' : '');
+            span.textContent = `... ${type}`;
+            span.onclick = () => switchPaperBtn(i);
+            papersNav.appendChild(span);
+        });
+
+        papersHeader.appendChild(papersNav);
+        papersDiv.appendChild(papersHeader);
+
+        // 论文内容
+        const papersContent = document.createElement('div');
+        papersContent.id = 'yh_paperContent';
+
+        content.papers.list.forEach((paperList, i) => {
+            const paperTypeDiv = document.createElement('div');
+            paperTypeDiv.className = i === 0 ? 'yh_paperActive' : '';
+
+            paperList.forEach(paper => {
+                const paperItem = document.createElement('div');
+                paperItem.className = 'yh_paperItem' + (paper.link ? ' yh_hasLink' : '');
+
+                const textsDiv = document.createElement('div');
+                textsDiv.className = 'yh_paperTexts';
+
+                const titleP = document.createElement('p');
+                if (paper.isNew) {
+                    titleP.innerHTML = `
+                            <img src="./imgs/research/icon_new_slices/icon_new.png" alt="">
+                            <span>${paper.title}</span>
+                        `;
+                } else {
+                    titleP.innerHTML = `<span>${paper.title}</span>`;
+                }
+                textsDiv.appendChild(titleP);
+
+                const authorsP = document.createElement('p');
+                authorsP.textContent = paper.authors;
+                textsDiv.appendChild(authorsP);
+
+                const confP = document.createElement('p');
+                confP.textContent = paper.conference;
+                textsDiv.appendChild(confP);
+
+                paperItem.appendChild(textsDiv);
+
+                if (paper.link) {
+                    const arrowP = document.createElement('p');
+                    arrowP.className = 'yh_paperArrow';
+                    arrowP.textContent = '→';
+                    paperItem.appendChild(arrowP);
+
+                    const link = document.createElement('a');
+                    link.href = paper.link;
+                    link.target = "_blank";
+                    paperItem.appendChild(link);
+                }
+
+                paperTypeDiv.appendChild(paperItem);
+            });
+
+            papersContent.appendChild(paperTypeDiv);
+        });
+
+        papersDiv.appendChild(papersContent);
+        fragment.appendChild(papersDiv);
+
+        // 项目成果
+        const projectsTitle = document.createElement('p');
+        projectsTitle.className = 'yh_smallTitle';
+        projectsTitle.textContent = '项目成果';
+        fragment.appendChild(projectsTitle);
+
+        const projectsList = document.createElement('div');
+
+        content.projects.forEach((project, i) => {
+            const projectItem = document.createElement('div');
+            projectItem.className = 'yh_projectsResItem';
+
+            const header = document.createElement('div');
+            header.id = 'yh_accordionHeader';
+
+            const titleDiv = document.createElement('div');
+            titleDiv.textContent = project.title;
+            header.appendChild(titleDiv);
+
+            if (project.description) {
+                const toggleP = document.createElement('p');
+                toggleP.textContent = '+';
+                header.appendChild(toggleP);
+            }
+
+            projectItem.appendChild(header);
+
+            if (project.description) {
+                const descP = document.createElement('p');
+                descP.className = 'yh_projectsResDet';
+                descP.textContent = project.description;
+                descP.style.display = 'none';
+                projectItem.appendChild(descP);
+            }
+
+            projectsList.appendChild(projectItem);
+        });
+
+        fragment.appendChild(projectsList);
+        return fragment;
+    }
+
+    // 创建团队活动内容
+    function createActivitiesContent(content) {
+        const fragment = document.createDocumentFragment();
+
+        // 标题图片
+        const titleImg = document.createElement('div');
+        titleImg.className = 'yh_commonImg yh_marginBottom54';
+        titleImg.innerHTML = `<img src="${content.titleImage}" alt="团队活动" style="max-width:100%;">`;
+        fragment.appendChild(titleImg);
+
+        // 学术交流
+        const academicTitle = document.createElement('p');
+        academicTitle.className = 'yh_smallTitle';
+        academicTitle.textContent = '学术交流';
+        fragment.appendChild(academicTitle);
+
+        const academicList = document.createElement('div');
+
+        content.academicExchanges.forEach(item => {
+            const academicItem = document.createElement('div');
+            academicItem.className = 'yh_academicItem';
+
+            academicItem.innerHTML = `
+                    <div class="yh_academicItemImg">
+                        <img src="${item.image}" alt="">
+                    </div>
+                    <div class="yh_academicItemTexts">
+                        <div>
+                            <p>${item.title}</p>
+                            <p>${item.subtitle}</p>
+                        </div>
+                        <p class="yh_academicArrow">→</p>
+                        <a href="${item.link}" target="_blank"></a>
+                    </div>
+                `;
+
+            academicList.appendChild(academicItem);
+        });
+
+        fragment.appendChild(academicList);
+
+        // 团建活动
+        const teamTitle = document.createElement('p');
+        teamTitle.className = 'yh_smallTitle';
+        teamTitle.textContent = '团建活动';
+        fragment.appendChild(teamTitle);
+
+        const teamDiv = document.createElement('div');
+        teamDiv.className = 'yh_activities';
+
+        content.teamBuilding.forEach(item => {
+            const activityItem = document.createElement('div');
+            activityItem.className = 'yh_activityItem';
+
+            activityItem.innerHTML = `
+                    <div class="yh_actTexts">
+                        ${item.text}
+                    </div>
+                    <div class="yh_actImg">
+                        <img src="${item.image}" alt="">
+                    </div>
+                `;
+
+            teamDiv.appendChild(activityItem);
+        });
+
+        const carouselBtns = document.createElement('div');
+        carouselBtns.innerHTML = `
+            <!-- 左右按钮 -->
+            <button class="yh_carouselBtn yh_prev">❮</button>
+            <button class="yh_carouselBtn yh_next">❯</button>
+            `;
+        teamDiv.appendChild(carouselBtns);
+
+        const carouselDots = document.createElement('div');
+        carouselDots.className = 'yh_carouselDots';
+        content.teamBuilding.forEach(() => {
+            // 指示器
+            const carouselDotSpan = document.createElement('span');
+            carouselDotSpan.className = 'yh_dot';
+            carouselDots.appendChild(carouselDotSpan);
+        })
+        teamDiv.appendChild(carouselDots);
+
+        fragment.appendChild(teamDiv);
+        return fragment;
+    }
+
+    // 创建优秀学生内容
+    function createStudentsContent(content) {
+        const fragment = document.createDocumentFragment();
+
+        // 标题图片
+        const titleImg = document.createElement('div');
+        titleImg.className = 'yh_commonImg yh_marginBottom54';
+        titleImg.innerHTML = `<img src="${content.titleImage}" alt="优秀学生" style="max-width:100%;">`;
+        fragment.appendChild(titleImg);
+
+        // 学生导航
+        const studentsNav = document.createElement('div');
+        studentsNav.id = 'yh_studentsNav';
+
+        content.studentTypes.forEach((type, i) => {
+            const span = document.createElement('span');
+            span.textContent = `... ${type}`;
+            span.onclick = () => switchStudentsBtn(i);
+            if (i === 0) span.classList.add('yh_stuTextHighLight');
+
+            if (i > 0) {
+                studentsNav.appendChild(document.createTextNode(' '));
+            }
+            studentsNav.appendChild(span);
+        });
+
+        fragment.appendChild(studentsNav);
+
+        // 学生内容
+        const studentsContent = document.createElement('div');
+        studentsContent.id = 'yh_stuContent';
+
+        content.students.forEach((studentList, i) => {
+            const studentTypeDiv = document.createElement('div');
+            studentTypeDiv.className = i === 0 ? 'yh_stuActive' : '';
+
+            const gridDiv = document.createElement('div');
+            gridDiv.className = 'yh_stuPhotoGrid';
+
+            studentList.forEach(student => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'yh_stuPhotoItem';
+
+                itemDiv.innerHTML = `
+                        ${student.image ? `<img src="${student.image}" alt="">` : `<div class="yh_defaultCon">${student.name}</div>`}
+                        <div class="yh_mask"></div>
+                        <div class="yh_stuTexts">
+                            <p>${student.name} <span>${student.degree ? student.degree : ''}</span></p>
+                            <div class="yh_maskAddContent">
+                                ${i === 0 ? `
+                                    ${student.time ? `<p>在校时间：<span>${student.time}</span></p>` : ''}
+                                    ${student.status ? `<p>现状：<span>${student.status}</span></p>` : ''}
+                                    ${student.honors ? `<p>在校荣誉：<span>${student.honors}</span></p>` : ''}
+                                    ${student.intro ? `<p>个人主页：<span>${student.intro}</span></p>` : ''}
+                                ` : `
+                                    ${student.grade ? `<p>年级：<span>${student.grade}</span></p>` : ''}
+                                    ${student.honors ? `<p>荣誉：<span>${student.honors}</span></p>` : ''}
+                                    ${student.papers ? `<p>论文：<span>${student.papers}</span></p>` : ''}
+                                `}
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End About -->
+                    `;
 
-<!-- Researches -->
-<section class="page-section" id="researches">
-    <div class="container">
-	
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">研究方向</h2>
-          
-		  <h3 class="section-subheading text-muted">RESEARCHES</h3>
-		  
-        </div>
-      </div>
-	  
-      <div class="row text-center">
-	  
-        <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-               <i class="fas fa-comments fa-stack-1x fa-inverse"></i></span>
-            <h4 class="researches-heading"><p>大语言模型</p></h4>
-<!--            填入学科简介-->
-          <div class="text-muted"><p></p>
-          </div>
-
-      </div>
-       <div class="col-md-4">
-
-              <span class="fa-stack fa-4x">
-                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                  <i class="fas fa-project-diagram fa-stack-1x fa-inverse"></i> </span>
-              <h4 class="researches-heading"><p>网络科学</p></h4>
-              <div class="text-muted"><p></p>
-              </div>
-
-       </div>
-
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-brain fa-stack-1x fa-inverse"></i>
-          </span>
-              <h4 class="researches-heading"><p>机器学习</p></h4>
-              <div class="text-muted"><p></p>
-              </div>
-
-          </div>
-
-          <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-search fa-stack-1x fa-inverse"></i>
-          </span>
-              <h4 class="researches-heading"><p>大数据下的网络挖掘</p></h4>
-              <div class="text-muted"><p></p>
-              </div>
-
-
-          </div>
-
-          <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-keyboard fa-stack-1x fa-inverse"></i>
-          </span>
-              <h4 class="researches-heading"><p>自然语言处理</p></h4>
-              <div class="text-muted"><p></p>
-              </div>
-
-
-          </div>
-      </div>
-    </div>
-  </section>
-<!-- End Researches -->
-
-
-   <section class="bg-light page-section" id="team">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">团队成员</h2>
-                        <h3 class="section-subheading text-muted">TEAM MEMBER</h3>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/liping.png" alt="">
-                            <h4>李平</h4>
-                            <p class="text-muted">中心主任/研究员/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="LiPing_introduce.html" class="clickable-link">简介</a>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/liuying.png" alt="">
-                            <h4>刘影</h4>
-                            <p class="text-muted">副教授/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-
-                                <a href="Liuyin_introduce.html" class="clickable-link">简介</a>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/zhongxueyan.png" alt="">
-                            <h4>钟学燕</h4>
-                            <p class="text-muted">副教授/硕导</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="Zhongxueyan_introduce.html" class="clickable-link">简介</a>
-
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/zhongyuan.png" alt="">
-                            <h4>钟原</h4>
-                            <p class="text-muted">副教授/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="ZhongYuan_introduce.html" class="clickable-link">简介</a>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/liangxiao.png" alt="">
-                            <h4>梁晓</h4>
-                            <p class="text-muted">副教授/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="liangxiao_introduce.html" class="clickable-link">简介</a>
-
-                            </ul>
-                        </div>
-                    </div>
-
-		    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/aoyongcai.png" alt="">
-                            <h4>敖永才</h4>
-                            <p class="text-muted">副研究员/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="aoyongcai_introduce.html" class="clickable-link">简介</a>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/wangjianbo.jpg" alt="">
-                            <h4>王建波</h4>
-                            <p class="text-muted"> 讲师/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="wangjianbo_introduce.html" class="clickable-link">简介</a>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/wanghuanwen.png" alt="">
-                            <h4>王换文</h4>
-                            <p class="text-muted"> 讲师/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="wanghuanwen_introduce.html" class="clickable-link">简介</a>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/zhangyun.jpg" alt="">
-                            <h4>张韵</h4>
-                            <p class="text-muted"> 讲师/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="zhangyun_introduce.html" class="clickable-link">简介</a>
-                            </ul>
-                        </div>
-                    </div>
-
-		    <div class="col-sm-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" style="width:200px;height:250px" src="assets/img/teacher/caoyu.jpg" alt="">
-                            <h4>曹宇</h4>
-                            <p class="text-muted"> 讲师/硕导/博士</p>
-                            <ul class="list-inline social-buttons">
-                                <a href="chaoyu_introduce.html" class="clickable-link">简介</a>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <div class="large text-muted">
-                        </div>
-                    </div>
-                </div>
-            </div>
-   </section>
-
-
-<!-- Papers -->
-<section class="page-section" id="papers">
-    <div class="container">
-	
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">论著</h2>
-          
-		  <h3 class="section-subheading text-muted">PAPERS</h3>
-		  
-        </div>
-      </div>
-     
-
-
-      <br><hr/><h2><div class="section-heading text-uppercase"><p>团队近期部分会议论文：</p></div></h2>
-      <h3 class="section-subheading text-muted">Some Top-tier Conference Papers of the Team: </h3>
-
-	<div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-		     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font>
-                    <font size="4"><b>Enriching molecular graph representation via substructure learning</b></font>
-                </p>
-                <p align="left">
-                    <i> HongHao Wang, Acong Zhang, Ping Li.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3"> International Conference onBioinformatics and Biomedicine (BIBM 2024)</font></font>
-                </p>
-            </div>
-        </div>
-	    
-	<div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-		     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font>
-                    <font size="4"><b>Chain-aware graph neural networks for molecular property prediction</b></font>
-                </p>
-                <p align="left">
-                    <i> Honghao Wang, Acong Zhang, Yuan Zhong, Junlei Tang, Kai Zhang, Ping Li.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Bioinformatics(2024)</font></font>
-                </p>
-		<p align="left">
-			<a href="https://academic.oup.com/bioinformatics/article/40/10/btae574/7818417?login=false" target="_blank">论文链接</a>
-                </p>
-            </div>
-        </div>
-	    
-	
-	
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-<!--                     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font> -->
-                    <font size="4"><b>High-Order Contrastive Learning with Fine-grained Comparative Levels for Sparse Ordinal Tensor Completion</b></font>
-                </p>
-                <p align="left">
-                    <i>Yu Dai, Junchen Shen, Zijie Zhai, Danlin Liu, Jingyang Chen, Yu Sun, Ping Li, Jie Zhang, Kai Zhang</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Forty-First International Conference on Machine Learning (ICML) , 2024</font></font>
-                </p>
-            </div>
-        </div>
-
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-<!--                     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font> -->
-                    <font size="4"><b>Unsupervised Monte Carlo Denoising via Learning Contrastive Disentanglement Representation</b></font>
-                </p>
-                <p align="left">
-                    <i>Xiao Liang, Siyuan Duan.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">IEEE International Conference on Multimedia and Expo, 2024</font></font>
-                </p>
-            </div>
-        </div>
-
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-<!--                     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font> -->
-                    <font size="4"><b>HindRec: Aligning User Preferences for Recommendation via Hindsight Fine-tuning</b></font>
-                </p>
-                <p align="left">
-                    <i>Yawen Zeng,Huanwen Wang, Lingyu Chen, Wenshu Chen, Ran Chen, Hao Chen.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">In Proceedings of the 30th SIGKDD Conference on Knowledge Discovery and Data Minin, 2024</font></font>
-                </p>
-            </div>
-        </div>
-        
-
-
-
-
-
-      <div class="container" style="clear:both;"></div>
-	  
-      <hr/><h2><div class="section-heading text-uppercase"><p>团队近期部分期刊论文：</p></div></h2>
-      <h3 class="section-subheading text-muted">Some Top-tier Journal Papers of the Team: </h3>
-
-	<div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-                    <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font>
-                    <font size="4"><b>基于节点中心性排序和交替乘子法的网络重构</b></font>
-                </p>
-                <p align="left">
-                    <i>王建波, 刘江华, 杜占玮, 李平, 许小可.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">中国科学：信息科学, 2025</font></font>
-                </p>
-		<p align="left">
-			<a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2024-0276" target="_blank">论文链接</a>
-                </p>
-            </div>
-         </div>
-
-	<div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-                    <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font>
-                    <font size="4"><b>Epidemic spread dynamics in multilayer networks: Probing the impact of information outbreaks and reception games</b></font>
-                </p>
-                <p align="left">
-                    <i>Jianbo Wang Haoxing He Ping Li Zhanwei Du Xiaoke Xu.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Chaos, 2025</font></font>
-                </p>
-		<p align="left">
-			<a href="https://pubs.aip.org/aip/cha/article-abstract/35/3/033118/3338792/Epidemic-spread-dynamics-in-multilayer-networks?redirectedFrom=fulltext" target="_blank">论文链接</a>
-                </p>
-            </div>
-         </div>
-
-	    <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-                    <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font>
-                    <font size="4"><b>CWIIIF: A Novel Algorithm for Identifying Influential Nodes in Multilayer Networks</b></font>
-                </p>
-                <p align="left">
-                    <i>Jianbo Wang; Yu Luo; Zhanwei Du; Ping Li; Xiao-Ke Xu.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">IEEE Transactions on Computational Social Systems, 2025</font></font>
-                </p>
-		<p align="left">
-			<a href="https://ieeexplore.ieee.org/abstract/document/10930885" target="_blank">论文链接</a>
-                </p>
-            </div>
-         </div>
-
-	<div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-		     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font>
-                    <font size="4"><b>Identifying influential nodes in spreading process in complex networks by integrating node dynamic propagation features and local structure</b></font>
-                </p>
-                <p align="left">
-                    <i> HOU Shiyu, LIU Ying, TANG Ming.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Acta Phys. Sin.(2025)</font></font>
-                </p>
-            </div>
-        </div>
-
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-<!--                     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font> -->
-                    <font size="4"><b>Minicolumn-based episodic memory model with spiking neurons, dendrites and delays</b></font>
-                </p>
-                <p align="left">
-                    <i>Zhang Yun, Chen Yi, et al.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">IEEE Transactions on Neural Networks and Learning Systems, 2024</font></font>
-                </p>
-            </div>
-         </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-<!--                     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font> -->
-                    <font size="4"><b>DPGCL: Dual pass filtering based graph contrastive learning</b></font>
-                </p>
-                <p align="left">
-                    <i>Rui Huang, Ping Li*, Kai Zhang</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Neural Networks，2024</font></font>
-                </p>
-            </div>
-        </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-<!--                     <font style="font-family:Lucida Calligraphy"><font color="#FF0000"><font size="3"><b><sup>New</sup></b></font></font></font> -->
-                    <font size="4"><b> Message Passing on Semantic-Anchor-Graphs for Fine-grained Emotion Representation Learning and Classification</b></font>
-                </p>
-                <p align="left">
-                    <i>Pinyi Zhang,  Ping Li, Jie Zhang, and Kai Zhang</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing（EMNLP 2024）</font></font>
-                </p>
-            </div>
-        </div>
-
-<!--         <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-                    <font size="4"><b> Dual-Channel Span for Aspect Sentiment Triplet Extraction</b></font>
-                </p>
-                <p align="left">
-                    <i>Li Pan, Li Ping*, Zhang Kai</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3"> Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing（EMNLP 2023）</font></font>
-                </p>
-            </div>
-        </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-                    <font size="4"><b> Hub-hub connections matter: Improving edge dropout to relieve over-smoothing in graph neural networks</b></font>
-                </p>
-                <p align="left">
-                    <i>Huang Rui, Li  Ping*</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Knowledge-Based Systems, 2023</font></font>
-                </p>
-            </div>
-        </div>
-
-
-      <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-        <div class="container clearfix" style="float:left;width:70%;height:100%;">
-            <p align="left">
-                <font size="4"><b>Epidemic dynamics with non-Markovian travel in multilayer networks</b></font>
-            </p>
-            <p align="left">
-                <i>Chen, Y., Liu, Y., Tang, M., & Lai, Y.-C.</i>
-            </p>
-            <p align="left">
-                <font color="#336199"><font size="3">Communications Physics,2023</font></font>
-            </p>
-        </div>
-      </div>
-
-      <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-        <div class="container" style="float:left;width:70%;height:100%;">
-
-            <p align="left">
-
-                <font size="4"><b>Identify Influential Spreaders in Asymmetrically Interacting Multiplex Networks</b></font>
-            </p>
-            <p align="left">
-                <i>Liu, Y., Zeng, Q., Pan, L., & Tang, M.</i>
-            </p>
-            <p align="left">
-                <font color="#336199"><font size="3">IEEE Transactions on Network Science and Engineering , 2023</font></font>
-            </p>
-
-        </div>
-      </div>
-
-      <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-        <div class="container" style="float:left;width:70%;height:100%;">
-            <p align="left">
-
-                <font size="4"><b>Asymmetrically interacting dynamics with mutual confirmation from multi-source on multiplex networks</b></font>
-            </p>
-            <p align="left">
-                <i>Chen, J., Liu, Y., Tang, M., & Yue, J.</i>
-            </p>
-            <p align="left">
-                <font color="#336199"><font size="3">Information Sciences, 2023</font></font>
-            </p>
-        </div>
-      </div>
-
-
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-
-                    <font size="4"><b>Perspective on the spatio-temporal spread of epidemics in metapopulation networks</b></font>
-                </p>
-                <p align="left">
-                    <i>Jianbo Wang, et al.</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Europhysics Letters, 2023</font></font>
-                </p>
-            </div>
-        </div>
-
-      <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-        <div class="container" style="float:left;width:70%;height:100%;">
-
-            <p align="left">
-
-                <font size="4"><b>Dynamically evolving deep neural networks with continuous online learning</b></font>
-            </p>
-            <p align="left">
-                <i>Zhong, Yuan, Zhou, Jing, Li, Ping, et al.</i>
-            </p>
-            <p align="left">
-                <font color="#336199"><font size="3">INFORMATION SCIENCES, 2023</font></font>
-            </p>
-        </div>
-      </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-
-                    <font size="4"><b>Interval-enhanced Graph Transformer Solution for Session-based Recommendation.</b></font>
-                </p>
-                <p align="left">
-                    <i>HuanwenWang,YawenZeng, JianguoChen, NingHan, HaoChen</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Expert Systems with Applications, 2023</font></font>
-                </p>
-            </div>
-        </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-
-                <p align="left">
-
-                    <font size="4"><b>A Spatiotemporal Graph Neural Network for Session-Based Recommendation</b></font>
-                </p>
-                <p align="left">
-                    <i>HuanwenWang,YawenZeng, JianguoChen, Zhouting Zhao, HaoChen</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Expert Systems with Applications, 2022</font></font>
-                </p>
-            </div>
-        </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-                    <font size="4"><b> Traffic-GGNN: Predicting Traffic Flow via Attentional Spatial-Temporal Gated Graph Neural Networks</b></font>
-                </p>
-                <p align="left">
-                    <i>Wang Yang, Zheng Jin, Du Yuqi, Huang Cheng, Li Ping</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">IEEE Transactions on Intelligent Transportation Systems（TITS）, 2022</font></font>
-                </p>
-            </div>
-        </div>
-
-        <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-            <div class="container" style="float:left;width:70%;height:100%;">
-                <p align="left">
-                    <font size="4"><b>Online Rebuilding Regression Random Forests</b></font>
-                </p>
-                <p align="left">
-                    <i>Yuan Zhong, Hongyu Yang, Yanci Zhang, Ping Li</i>
-                </p>
-                <p align="left">
-                    <font color="#336199"><font size="3">Knowledge-Based Systems, 2021</font></font>
-                </p>
-            </div>
-        </div>
-
-      <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-        <div class="container" style="float:left;width:70%;height:100%;">
-
-            <p align="left">
-
-                <font size="4"><b>Online random forests regression with memories</b></font>
-            </p>
-            <p align="left">
-                <i>Yuan Zhong, Hongyu Yang, Yanci Zhang, Ping Li</i>
-            </p>
-            <p align="left">
-                <font color="#336199"><font size="3">Knowledge-Based Systems, 2020</font></font>
-            </p>
-        </div>
-      </div> -->
-
-
-
-    </div>
-    <div class="container" style="clear:both;"></div>
-
-    <!-- important! -->
-</section>
-<!-- End Papers -->
-
-<!--      project-->
-
-      <section class="page-section" id="project">
-          <div class="container">
-
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading text-uppercase">项目</h2>
-
-                      <h3 class="section-subheading text-muted">PROJECTS</h3>
-
-                  </div>
-              </div>
-
-
-              <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-                  <div class="container" style="float:left;width:70%;height:100%;">
-                      <p align="left">
-                          <font size="4"><b>水电站泄洪预警无线广播系统</b></font>
-                      </p>
-                  </div>
-              </div>
-              <div class="container" style="clear:both;"></div>
-              <hr/><h2><div class="section-heading text-uppercase"><p></p></div></h2>
-
-
-              <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-                  <div class="container" style="float:left;width:70%;height:100%;">
-                      <p align="left">
-                          <font size="4"><b>水电监控信号矛盾性异常识别模型研究报告</b></font>
-                      </p>
-                      <p align="left">
-                          <font color="#336199"><font size="3">信号量大/重复信号多/包含无用信号(检修)/异常信号难以直接挖掘。需要提出一种矛盾性异常识别方法。</font></font>
-                      </p>
-                  </div>
-              </div>
-              <div class="container" style="clear:both;"></div>
-              <hr/><h2><div class="section-heading text-uppercase"><p></p></div></h2>
-
-
-
-              <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-                  <div class="container" style="float:left;width:70%;height:100%;">
-                      <p align="left">
-                          <font size="4"><b>天然气深冷装置关键工艺参数智能优化研究与应用</b></font>
-                      </p>
-                      <p align="left">
-                          <font color="#336199"><font size="3">本项目结合天然气深冷装置关键工艺设备的运行情况，开展大数据分析的研究和应用。</font></font>
-                      </p>
-                  </div>
-              </div>
-              <div class="container" style="clear:both;"></div>
-              <hr/><h2><div class="section-heading text-uppercase"><p></p></div></h2>
-
-              <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-                  <div class="container" style="float:left;width:70%;height:100%;">
-                      <p align="left">
-                          <font size="4"><b>水电设备监控噪声信号智能过滤技术方案</b></font>
-                      </p>
-<!--                      <p align="left">-->
-<!--                          <font color="#336199"><font size="3">本项目结合天然气深冷装置关键工艺设备的运行情况，开展大数据分析的研究和应用。</font></font>-->
-<!--                      </p>-->
-                  </div>
-              </div>
-              <div class="container" style="clear:both;"></div>
-              <hr/><h2><div class="section-heading text-uppercase"><p></p></div></h2>
-
-              <div class="container" display="inline-block" style="float:left;width:100%;margin-bottom:30px;">
-                  <div class="container" style="float:left;width:70%;height:100%;">
-                      <p align="left">
-                          <font size="4"><b>天然气深冷装置关键工艺参数智能优化研究与应用</b></font>
-                      </p>
-                      <p align="left">
-                          <font color="#336199"><font size="3">项目以大数据、深度学习、图神经网络挖掘技术为主要手段，将现有的DCS系统的过程实时数据和生产信息集成，建立深冷装置液态产品产量的智能算法模型，实时监测深冷装置运行状态，提出关键工艺参数优化策略并指导实施，以期达到有效提高对天然气深冷装置生产特征和运行规律的认识，提高运行效率和效益，实现精简化、智能化管理的目的。</font></font>
-                      </p>
-                  </div>
-              </div>
-              <div class="container" style="clear:both;"></div>
-              <hr/><h2><div class="section-heading text-uppercase"><p></p></div></h2>
-
-
-
-
-
-          </div>
-          <div class="container" style="clear:both;"></div>
-
-          <!-- important! -->
-      </section>
-
-<!-- News -->
-
-       <section class="bg-light page-section" id="xinwen">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase"><p>新闻</p>
-</h2>
-          <h3 class="section-subheading text-muted"><p>NEWS</p>
-</h3>
-        </div>
-      </div>
- <div class="row">
-
-          <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" href="https://mp.weixin.qq.com/s/VaREtKOUkvu39awl_IcDQw"> 
-                  <div class="portfolio-hover">
-                      <div class="portfolio-hover-content">
-                          <i class="fas fa-plus fa-3x"></i> 
-                      </div>
-                  </div>
-                  <img class="img-fluid" src="assets/img/portfolio/new1.png" alt="">
-              </a>
-              <div class="portfolio-caption">
-                  <h4>走近西南石油大学优秀导师伯乐奖获奖者</h4>
-                  <p class="text-muted">The announcement of the 2024 Southwest Petroleum University Outstanding Mentor Bole Award!</p>
-              </div>
-          </div>
-
-	 <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" href="https://www.swpu.edu.cn/scs/info/1045/8134.htm">
-                  <div class="portfolio-hover">
-                      <div class="portfolio-hover-content">
-                          <i class="fas fa-plus fa-3x"></i>
-                      </div>
-                  </div>
-                  <img class="img-fluid" src="assets/img/portfolio/new2.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                  <h4>我院研究成果入选生物信息学旗舰会议BIBM2024</h4>
-                  <p class="text-muted">The research achievements of our school have been selected for the flagship conference of bioinformatics, BIBM 2024!</p>
-              </div>
-          </div>
-
-      
-      </div>
-    </div>
-  </section>
-
-
-
-        <section class="bg-light page-section" id="graduate">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">校友</h2>
-                        <h3 class="section-subheading text-muted">ALUMNI</h3>
-
-<!--                        <h3 class="graudestyletwo">（以下排名不分先后）</h3>-->
-
-                    </div>
-                </div>
-
-                <!-- 学生信息容器 -->
-                <div class="student-container">
-                    <!-- 第一行显示的5个学生 -->
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/LiPan.png" alt="">
-                        <h4>李攀</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/zoujin.jpg" alt="">
-                        <h4>周静</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/huangjinchen.png" alt="">
-                        <h4>黄金诚</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/chenyushu.png" alt="">
-                        <h4>陈钰书</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/huangrui.png" alt="">
-                        <h4>黄睿</h4>
-                    </div>
-
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/huangyenan.png" alt="">
-                        <h4>黄亚男</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">刘小溶</div>
-
-                        <h4>刘小溶</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/lipencheng.jpg" alt="">
-                        <h4>李鹏程</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/qiuhua.PNG" alt="">
-                        <h4>邱花</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/shenchengxu.jpg" alt="">
-                        <h4>沈成旭</h4>
-                    </div>
-                </div>
-
-                <!-- 额外学生信息（默认隐藏） -->
-                <div class="student-container extra-students">
-
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/liulihui.jpg" alt="">
-                        <h4>刘利珲</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/chaozhangyu.jpg" alt="">
-                        <h4>曹张宇</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/dengdan.jpg" alt="">
-                        <h4>邓丹</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/panenyuan.jpg" alt="">
-                        <h4>潘恩元</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/yangjianxin.png" alt="">
-                        <h4>杨建新</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/zhangacong.png" alt="">
-                        <h4>张阿聪</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/liguowei.jpg" alt="">
-                        <h4>李国伟</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/husiqi.jpg" alt="">
-                        <h4>胡诗琪</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/zhaojinsong.jpg" alt="">
-                        <h4>赵晋松</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/yangxiaojing.png" alt="">
-                        <h4>杨小净</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">徐舒琳</div>
-                        <h4>徐舒琳</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">曾琦</div>
-                        <h4>曾琦</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">裴建新</div>
-                        <h4>裴建新</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">郑克鲜</div>
-                        <h4>郑克鲜</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">陈嘉兴</div>
-                        <h4>陈嘉兴</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">郭志成</div>
-                        <h4>郭志成</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">宋磊</div>
-                        <h4>宋磊</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">邓振宇</div>
-                        <h4>邓振宇</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">赖宇航</div>
-                        <h4>赖宇航</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">李江</div>
-                        <h4>李江</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar"> 阳成</div>
-                        <h4>阳成</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">康泽 </div>
-                        <h4>康泽</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar">沈力峰</div>
-                        <h4>沈力峰</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar"> 罗余</div>
-                        <h4> 罗余</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar"> 李本文</div>
-                        <h4> 李本文</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar"> 石佳</div>
-                        <h4> 石佳</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar"> 刘汉东</div>
-                        <h4> 刘汉东</h4>
-                    </div>
-                    <div class="team-member">
-                        <div class="initials-avatar"> 支港</div>
-                        <h4> 支港</h4>
-                    </div>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/tanhao.png" alt="">
-                        <h4>谭浩</h4>
-                    </div>
-		    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/student/gouli.png" alt="">
-                        <h4>苟莉</h4>
-                    </div>
-		
-                </div>
-
-                <!-- 显示更多/收起按钮 -->
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <button id="toggle-button" class="btn">
-                            展开显示更多
-                            <span class="arrow">▼</span> <!-- 箭头指示器 -->
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Footer -->
-  <footer class="footer" id="footer" style="background-color:white;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; ABOUTCINS 2024</span>
-        </div>
-		<!-- Social Media -->
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-		  
-            <li class="list-inline-item">
-			  
-              <a href="https://twitter.com">
-                <i class="fab fa-twitter"></i>
-              </a>
-			  
-            </li>
-			
-            <li class="list-inline-item">
-			  
-              <a href="https://facebook.com">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-			  
-            </li>
-			
-            <li class="list-inline-item">
-			  
-              <a href="https://linkedin.com">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-			  
-            </li>
-			
-            <li class="list-inline-item">
-			  
-              <a href="https://github.com/raviriley/agency-jekyll-theme">
-                <i class="fab fa-github"></i>
-              </a>
-			  
-            </li>
-			
-            <li class="list-inline-item">
-			  
-              <a href="https://instagram.com">
-                <i class="fab fa-instagram"></i>
-              </a>
-			  
-            </li>
-			
-          </ul>
-        </div>
-		<!-- Legal -->
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="legal">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- End Footer -->
-
-	  <!-- Bootstrap core JavaScript -->
-	  <script src="assets/js/jquery.min.js"></script>
-	  <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-	  <!-- Plugin JavaScript -->
-	  <script src="assets/js/jquery.easing.min.js"></script>
-
-	  <!-- Contact form JavaScript -->
-	  <script src="assets/js/jqBootstrapValidation.js"></script>
-	  <script src="assets/js/contact_me.js"></script>
-
-	  <!-- Custom scripts for this template -->
-	  <script src="assets/js/agency.min.js"></script>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            // 控制显示更多与收起的功能
-            document.getElementById("toggle-button").addEventListener("click", function () {
-                const extraStudents = document.querySelector(".extra-students");
-                extraStudents.classList.toggle("show"); // 切换隐藏与显示
-
-                // 更改按钮文本和箭头方向
-                const arrow = document.querySelector("#toggle-button .arrow");
-                if (extraStudents.classList.contains("show")) {
-                    this.textContent = "收起 ";
-                    this.appendChild(arrow);
-                    arrow.classList.add("up"); // 添加箭头向上的样式
-                } else {
-                    this.textContent = "展开显示更多 ";
-                    this.appendChild(arrow);
-                    arrow.classList.remove("up"); // 移除箭头向上的样式
-                }
+                gridDiv.appendChild(itemDiv);
             });
-        </script>
 
+            studentTypeDiv.appendChild(gridDiv);
+            studentsContent.appendChild(studentTypeDiv);
+        });
 
+        fragment.appendChild(studentsContent);
+        return fragment;
+    }
 
-  </body>
+    // 初始化交互功能
+    function initInteractions() {
+        // 切换标签
+        window.switchTab = function (index) {
+            const domList = document.querySelectorAll('.yh-container #yh_content > div');
+            const ulList = document.querySelectorAll('.yh-container #yh_nav > ul');
+            const yellowLines = document.querySelectorAll('.yh_yellowLine');
+
+            domList.forEach((item, i) => {
+                item.classList.toggle('yh_active', index === i);
+            });
+
+            ulList.forEach((item, i) => {
+                item.classList.toggle('yh_highLight', index === i);
+            });
+
+            yellowLines.forEach((line, i) => {
+                line.style.opacity = index === i ? '1' : '0';
+            });
+
+            scrollToTop();
+        };
+
+        // 切换论文标签
+        window.switchPaperBtn = function (index) {
+            const paperSpanList = document.querySelectorAll('.yh-container #yh_paperButtons > span');
+            const paperDivList = document.querySelectorAll('.yh-container #yh_paperContent > div');
+
+            paperSpanList.forEach((item, i) => {
+                item.classList.toggle('yh_textHighLight', index === i);
+            });
+
+            paperDivList.forEach((item, i) => {
+                item.classList.toggle('yh_paperActive', index === i);
+            });
+        };
+
+        // 项目详情切换
+        const accordionItems = document.querySelectorAll('.yh-container .yh_projectsResItem:has(.yh_projectsResDet)');
+        accordionItems.forEach(item => {
+            item.addEventListener('click', function () {
+                this.classList.toggle('yh_projectsResItemHighLight');
+
+                const header = this.querySelector('#yh_accordionHeader');
+                const content = this.querySelector('.yh_projectsResDet');
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+                const toggle = header.querySelector('p');
+                toggle.textContent = toggle.textContent === '+' ? '-' : '+';
+            });
+        });
+
+        // 切换学生标签
+        window.switchStudentsBtn = function (index) {
+            const studentsSpanList = document.querySelectorAll('.yh-container #yh_studentsNav > span');
+            const studentDivList = document.querySelectorAll('.yh-container #yh_stuContent > div');
+
+            studentsSpanList.forEach((item, i) => {
+                item.classList.toggle('yh_stuTextHighLight', index === i);
+            });
+
+            studentDivList.forEach((item, i) => {
+                item.classList.toggle('yh_stuActive', index === i);
+            });
+        };
+
+        // 滚动到顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        /** 
+         * 团建活动-轮播 --------------------------------start--------------------------------
+        */
+        const items = document.querySelectorAll('.yh-container .yh_activityItem');
+        const yh_dots = document.querySelectorAll('.yh-container .yh_dot');
+        const yh_prevBtn = document.querySelector('.yh-container .yh_prev');
+        const yh_nextBtn = document.querySelector('.yh-container .yh_next');
+        const yhContainer = document.querySelector('.yh-container'); // 获取容器
+        let currentIndex = 0;
+
+        // 初始化
+        items[0].classList.add('active');
+        yh_dots[0].classList.add('active');
+
+        function showSlide(index) {
+            items.forEach(item => item.classList.remove('active'));
+            yh_dots.forEach(yh_dot => yh_dot.classList.remove('active'));
+            items[index].classList.add('active');
+            yh_dots[index].classList.add('active');
+        }
+
+        function yh_nextSlide() {
+            currentIndex = (currentIndex + 1) % items.length;
+            showSlide(currentIndex);
+        }
+
+        function yh_prevSlide() {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showSlide(currentIndex);
+        }
+
+        // 按钮事件
+        yh_nextBtn.addEventListener('click', yh_nextSlide);
+        yh_prevBtn.addEventListener('click', yh_prevSlide);
+
+        // 指示器点击事件
+        yh_dots.forEach((yh_dot, index) => {
+            yh_dot.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+            });
+        });
+
+        // 自动轮播（可选）
+        let interval = setInterval(yh_nextSlide, 3000);
+
+        // 鼠标悬停时暂停轮播
+        yhContainer.addEventListener('mouseenter', () => {
+            clearInterval(interval);
+        });
+
+        yhContainer.addEventListener('mouseleave', () => {
+            interval = setInterval(yh_nextSlide, 3000);
+        });
+        /** 
+         * 团建活动-轮播 --------------------------------end--------------------------------
+        */
+    }
+
+    // 页面加载完成后渲染
+    document.addEventListener('DOMContentLoaded', function () {
+        // 渲染页面
+        renderPage();
+    });
+</script>
+</body>
 </html>
